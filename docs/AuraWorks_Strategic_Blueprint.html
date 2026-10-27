@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraWorks & The Ecommerce Startup That Sells — Complete Strategic Blueprint</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #3730a3;
+            --primary-light: #e0e7ff;
+            --primary-subtle: #eef2ff;
+            --secondary: #0ea5e9;
+            --secondary-light: #e0f2fe;
+            --accent: #f59e0b;
+            --accent-light: #fef3c7;
+            --success: #10b981;
+            --success-light: #dcfce7;
+            --danger: #ef4444;
+            --danger-light: #fee2e2;
+            --dark: #0f172a;
+            --dark-card: #1e293b;
+            --card-bg: #ffffff;
+            --body-bg: #f8fafc;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --border-light: #f1f5f9;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 18px;
+            --radius-xl: 24px;
+            --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.07);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.06);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.04);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--body-bg);
+            color: var(--text-main);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 5rem 1.5rem;
+        }
+
+        /* Top Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #090d16 0%, #111827 40%, #1e1b4b 80%, #312e81 100%);
+            color: white;
+            padding: 4rem 3rem;
+            border-radius: var(--radius-xl);
+            margin-bottom: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, rgba(0, 0, 0, 0) 70%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: 20%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.4rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.825rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(12px);
+            color: #a5b4fc;
+        }
+
+        .hero h1 {
+            font-size: 2.75rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+            background: linear-gradient(to right, #ffffff, #e0e7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            max-width: 900px;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .hero-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            backdrop-filter: blur(12px);
+        }
+
+        .hero-meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-meta-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #94a3b8;
+            font-weight: 700;
+            margin-bottom: 0.35rem;
+        }
+
+        .hero-meta-value {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #f8fafc;
+        }
+
+        /* 2-Column Responsive Layout */
+        .layout-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2.25rem;
+            align-items: start;
+        }
+
+        @media (max-width: 1080px) {
+            .layout-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero {
+                padding: 2.5rem 1.75rem;
+            }
+            .hero h1 {
+                font-size: 2.1rem;
+            }
+        }
+
+        /* Sticky Sidebar Navigation */
+        .sidebar {
+            position: sticky;
+            top: 2rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .sidebar-title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.65rem 0.85rem;
+            border-radius: var(--radius-sm);
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 600;
+            transition: all 0.15s ease;
+        }
+
+        .nav-link:hover {
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+            transform: translateX(3px);
+        }
+
+        .nav-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            background: var(--border-light);
+            padding: 0.15rem 0.5rem;
+            border-radius: 6px;
+            color: var(--text-muted);
+        }
+
+        /* Content Sections */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .section-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-sm);
+            scroll-margin-top: 2rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.75rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            letter-spacing: -0.02em;
+        }
+
+        .section-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: var(--radius-md);
+            font-size: 1.25rem;
+        }
+
+        /* Highlight Boxes */
+        .callout-box {
+            background: var(--primary-subtle);
+            border: 1px solid var(--primary-light);
+            border-left: 5px solid var(--primary);
+            padding: 1.5rem 1.75rem;
+            border-radius: var(--radius-md);
+            margin: 1.5rem 0;
+        }
+
+        .callout-title {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--primary-dark);
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .callout-text {
+            color: #334155;
+            font-size: 0.95rem;
+            line-height: 1.65;
+        }
+
+        .quote-box {
+            font-style: italic;
+            background: #f8fafc;
+            border-left: 4px solid var(--secondary);
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            margin: 1.5rem 0;
+            color: #334155;
+            font-size: 0.98rem;
+        }
+
+        /* Scorecard Section */
+        .scorecard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .score-card {
+            background: var(--body-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+        }
+
+        .score-card-title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-muted);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .score-card-value {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--dark);
+            display: flex;
+            align-items: baseline;
+            gap: 0.25rem;
+        }
+
+        .score-card-value span {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .progress-bar-bg {
+            height: 6px;
+            background: var(--border);
+            border-radius: 9999px;
+            margin-top: 0.75rem;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            border-radius: 9999px;
+        }
+
+        .bg-indigo { background: #6366f1; }
+        .bg-emerald { background: #10b981; }
+        .bg-sky { background: #0ea5e9; }
+        .bg-purple { background: #a855f7; }
+        .bg-amber { background: #f59e0b; }
+        .bg-rose { background: #f43f5e; }
+
+        /* Tables */
+        .styled-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            margin: 1.5rem 0;
+            font-size: 0.92rem;
+        }
+
+        .styled-table th {
+            background: #f8fafc;
+            padding: 1rem 1.15rem;
+            font-weight: 800;
+            text-align: left;
+            color: var(--dark);
+            border-bottom: 1px solid var(--border);
+            letter-spacing: 0.02em;
+        }
+
+        .styled-table td {
+            padding: 0.95rem 1.15rem;
+            border-bottom: 1px solid var(--border);
+            color: #334155;
+            vertical-align: top;
+        }
+
+        .styled-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .styled-table tr:hover td {
+            background-color: #f8fafc;
+        }
+
+        /* Chapter Cards */
+        .chapter-box {
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            background: #ffffff;
+        }
+
+        .chapter-header {
+            background: #f8fafc;
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .chapter-number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+            font-weight: 700;
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 0.25rem 0.65rem;
+            border-radius: 6px;
+        }
+
+        .chapter-name {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--dark);
+            flex: 1;
+            margin-left: 0.75rem;
+        }
+
+        .chapter-rating {
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+        }
+
+        .rating-high { background: var(--success-light); color: #15803d; }
+        .rating-med { background: var(--accent-light); color: #b45309; }
+
+        .chapter-body {
+            padding: 1.5rem;
+        }
+
+        .chapter-summary {
+            font-size: 0.95rem;
+            color: #334155;
+            margin-bottom: 1.25rem;
+            line-height: 1.65;
+        }
+
+        .key-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .topic-pill {
+            background: var(--body-bg);
+            border: 1px solid var(--border);
+            padding: 0.25rem 0.65rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .analysis-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .pro-card {
+            background: #f0fdf4;
+            border: 1px solid #dcfce7;
+            border-radius: var(--radius-md);
+            padding: 1.15rem 1.25rem;
+        }
+
+        .con-card {
+            background: #fff1f2;
+            border: 1px solid #ffe4e6;
+            border-radius: var(--radius-md);
+            padding: 1.15rem 1.25rem;
+        }
+
+        .card-header-mini {
+            font-size: 0.825rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .pro-title { color: #16a34a; }
+        .con-title { color: #e11d48; }
+
+        .mini-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            font-size: 0.88rem;
+            color: #334155;
+        }
+
+        .mini-list li {
+            position: relative;
+            padding-left: 1.2rem;
+        }
+
+        .mini-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0.2rem;
+            font-weight: bold;
+        }
+
+        .pro-card .mini-list li::before { color: #16a34a; }
+        .con-card .mini-list li::before { color: #e11d48; }
+
+        /* Diagrams & Visual Flow */
+        .flow-container {
+            background: #0f172a;
+            color: #f8fafc;
+            border-radius: var(--radius-lg);
+            padding: 1.75rem;
+            margin: 1.5rem 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.88rem;
+            overflow-x: auto;
+            border: 1px solid #334155;
+        }
+
+        .flow-diagram {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            min-width: 600px;
+        }
+
+        .flow-step {
+            background: #1e293b;
+            border: 1px solid #475569;
+            padding: 1rem;
+            border-radius: var(--radius-md);
+            text-align: center;
+            flex: 1;
+        }
+
+        .flow-arrow {
+            color: #6366f1;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        /* Matrix Grids */
+        .matrix-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .matrix-box {
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            background: #ffffff;
+        }
+
+        .matrix-box.strength { border-top: 4px solid var(--success); }
+        .matrix-box.weakness { border-top: 4px solid var(--danger); }
+        .matrix-box.primary { border-top: 4px solid var(--primary); }
+        .matrix-box.secondary { border-top: 4px solid var(--secondary); }
+
+        .matrix-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--dark);
+        }
+
+        /* Roadmap Timeline */
+        .roadmap-timeline {
+            position: relative;
+            padding-left: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+            margin: 1.75rem 0;
+        }
+
+        .roadmap-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0.5rem;
+            bottom: 0.5rem;
+            left: 0.65rem;
+            width: 2px;
+            background: var(--border);
+        }
+
+        .roadmap-step {
+            position: relative;
+        }
+
+        .roadmap-node {
+            position: absolute;
+            left: -2rem;
+            top: 0.2rem;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 4px solid #ffffff;
+            box-shadow: 0 0 0 2px var(--primary-light);
+        }
+
+        .roadmap-content {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.35rem 1.5rem;
+        }
+
+        .roadmap-title {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 0.4rem;
+        }
+
+        .roadmap-desc {
+            font-size: 0.92rem;
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        /* Badges */
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .badge-primary { background: var(--primary-light); color: var(--primary-dark); }
+        .badge-success { background: var(--success-light); color: #166534; }
+        .badge-warning { background: var(--accent-light); color: #92400e; }
+        .badge-info { background: var(--secondary-light); color: #075985; }
+
+        .code-tag {
+            font-family: 'JetBrains Mono', monospace;
+            background: #f1f5f9;
+            color: #0f172a;
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .footer {
+            margin-top: 3.5rem;
+            text-align: center;
+            padding-top: 2.5rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Top Hero Section -->
+    <header class="hero">
+        <div class="hero-badge">Executive Blueprint & Strategic Master File</div>
+        <h1>AuraWorks & The Ecommerce Startup That Sells</h1>
+        <p class="hero-subtitle">
+            A unified strategic dossier: Comprehensive book audit, variable-cost contractor arbitrage model, pricing economics, and the South African youth empowerment personal brand roadmap.
+        </p>
+
+        <div class="hero-meta-grid">
+            <div class="hero-meta-item">
+                <span class="hero-meta-label">Founder & Author</span>
+                <span class="hero-meta-value">Reitumetse Bokang Allen Sethabela (Allen Reiley)</span>
+            </div>
+            <div class="hero-meta-item">
+                <span class="hero-meta-label">Commercial Entity</span>
+                <span class="hero-meta-value">AuraWorks (Pty) Ltd</span>
+            </div>
+            <div class="hero-meta-item">
+                <span class="hero-meta-label">Founder Skill Stack</span>
+                <span class="hero-meta-value">Code (Builder) • Sales (Hustler) • SOPs (Architect)</span>
+            </div>
+            <div class="hero-meta-item">
+                <span class="hero-meta-label">Strategic Focus</span>
+                <span class="hero-meta-value">Global B2B Revenue + Open-Source Youth Empowerment</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="layout-grid">
+        
+        <!-- Sticky Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-title">Blueprint Sections</div>
+            <ul class="nav-list">
+                <li><a href="#executive-overview" class="nav-link"><span>1. Executive Overview</span> <span class="nav-num">01</span></a></li>
+                <li><a href="#book-review" class="nav-link"><span>2. Granular Book Audit</span> <span class="nav-num">02</span></a></li>
+                <li><a href="#chapter-breakdown" class="nav-link"><span>&nbsp;&nbsp;• Chapters 1–8 Deep Dive</span> <span class="nav-num">02a</span></a></li>
+                <li><a href="#auraworks-architecture" class="nav-link"><span>3. AuraWorks Architecture</span> <span class="nav-num">03</span></a></li>
+                <li><a href="#bottlenecks-fixes" class="nav-link"><span>&nbsp;&nbsp;• 3 Bottlenecks & Fixes</span> <span class="nav-num">03a</span></a></li>
+                <li><a href="#pricing-strategy" class="nav-link"><span>4. Pricing & Monetization</span> <span class="nav-num">04</span></a></li>
+                <li><a href="#pr-personal-brand" class="nav-link"><span>5. PR & Youth Mission</span> <span class="nav-num">05</span></a></li>
+                <li><a href="#action-roadmap" class="nav-link"><span>6. Integrated Roadmap</span> <span class="nav-num">06</span></a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Section 1: Executive Overview -->
+            <section id="executive-overview" class="section-card">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-icon">📌</span>
+                        1. Executive Summary & Foundational Overview
+                    </h2>
+                    <span class="badge badge-primary">Strategic Evolution</span>
+                </div>
+
+                <p style="font-size: 1rem; color: #334155; margin-bottom: 1.25rem;">
+                    At age 19, Reitumetse Bokang Allen Sethabela (operating under the brand <strong>Allen Reiley</strong>) compiled a comprehensive 75-page operating guide titled <em>"The Ecommerce Startup That Sells: Proven Strategies for Online Sales Success"</em> (2023). Rather than remaining in theory, the founder spent the subsequent 3–4 years executing a disciplined skill-stacking journey:
+                </p>
+
+                <div class="matrix-grid">
+                    <div class="matrix-box primary">
+                        <h3 class="matrix-title"><span>💻</span> Self-Taught Developer</h3>
+                        <p style="font-size: 0.9rem; color: #475569;">
+                            Learned software engineering, web architecture, automation scripting, and API integrations. Capable of building custom client portals, scrapers, and internal tooling.
+                        </p>
+                    </div>
+                    <div class="matrix-box secondary">
+                        <h3 class="matrix-title"><span>📞</span> Frontline B2B Sales</h3>
+                        <p style="font-size: 0.9rem; color: #475569;">
+                            Hands-on experience in cold outbound, objection handling, high-ticket deal discovery, and psychological closing frameworks.
+                        </p>
+                    </div>
+                    <div class="matrix-box strength">
+                        <h3 class="matrix-title"><span>🏢</span> AuraWorks (Pty) Ltd</h3>
+                        <p style="font-size: 0.9rem; color: #475569;">
+                            Founded a formal corporate entity in South Africa operating a zero-fixed-overhead contractor arbitrage model powered by commission sales reps and project-based execution teams.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="callout-box">
+                    <div class="callout-title"><span>💡</span> The Core Synthesis</div>
+                    <div class="callout-text">
+                        The convergence of <strong>Code (Building) + Sales (Closing) + Systems (Arbitrage)</strong> positions the founder to scale AuraWorks as a high-margin tech-enabled service while leveraging the open-sourced book to build an authentic personal brand empowering South African youth.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Book Audit & Scorecard -->
+            <section id="book-review" class="section-card">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-icon">📖</span>
+                        2. Granular Book Audit: <em>The Ecommerce Startup That Sells</em>
+                    </h2>
+                    <span class="badge badge-success">Composite Score: 8.2 / 10</span>
+                </div>
+
+                <!-- Scorecard Grid -->
+                <div class="scorecard-grid">
+                    <div class="score-card">
+                        <div class="score-card-title">Practical Actionability</div>
+                        <div class="score-card-value">9.2 <span>/ 10</span></div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill bg-emerald" style="width: 92%;"></div></div>
+                    </div>
+                    <div class="score-card">
+                        <div class="score-card-title">SOP & Systems Rigor</div>
+                        <div class="score-card-value">9.0 <span>/ 10</span></div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill bg-indigo" style="width: 90%;"></div></div>
+                    </div>
+                    <div class="score-card">
+                        <div class="score-card-title">Consumer Psychology</div>
+                        <div class="score-card-value">8.8 <span>/ 10</span></div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill bg-sky" style="width: 88%;"></div></div>
+                    </div>
+                    <div class="score-card">
+                        <div class="score-card-title">AI & Automations</div>
+                        <div class="score-card-value">8.2 <span>/ 10</span></div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill bg-purple" style="width: 82%;"></div></div>
+                    </div>
+                    <div class="score-card">
+                        <div class="score-card-title">Scope Alignment</div>
+                        <div class="score-card-value">7.0 <span>/ 10</span></div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill bg-amber" style="width: 70%;"></div></div>
+                    </div>
+                    <div class="score-card">
+                        <div class="score-card-title">Editorial Polish</div>
+                        <div class="score-card-value">7.2 <span>/ 10</span></div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill bg-rose" style="width: 72%;"></div></div>
+                    </div>
+                </div>
+
+                <!-- Section 2a: Chapter Breakdown -->
+                <div id="chapter-breakdown">
+                    <h3 style="font-size: 1.25rem; font-weight: 800; margin: 2rem 0 1.25rem 0; color: var(--dark);">
+                        Chapter-by-Chapter Architectural Audit
+                    </h3>
+
+                    <!-- Ch 1 -->
+                    <div class="chapter-box">
+                        <div class="chapter-header">
+                            <span class="chapter-number">CHAPTER 01</span>
+                            <span class="chapter-name">Getting Started (Ideation, Positioning, Pricing & Funnels)</span>
+                            <span class="chapter-rating rating-high">9.0 / 10</span>
+                        </div>
+                        <div class="chapter-body">
+                            <p class="chapter-summary">
+                                Covers 8 online business models, niche selection using the 3-circle Ikigai Venn diagram (Passion, Competence, Market Gap), MVP design, full legal contracts (Client & Contractor), Decoy Pricing ($5/$8/$9 burger model), copywriting frameworks (AIDA, PAS, FAB, 4Ps), and email marketing mechanics (deliverability, subject-line curiosity, 80/20 value/pitch ratio).
+                            </p>
+                            <div class="key-topics">
+                                <span class="topic-pill">Ikigai Venn Diagram</span>
+                                <span class="topic-pill">Decoy Pricing</span>
+                                <span class="topic-pill">Full Legal Contract Templates</span>
+                                <span class="topic-pill">AIDA / PAS / FAB / 4Ps</span>
+                                <span class="topic-pill">Email Deliverability & Spam Rules</span>
+                            </div>
+                            <div class="analysis-grid">
+                                <div class="pro-card">
+                                    <div class="card-header-mini pro-title"><span>✓</span> Standout Strengths</div>
+                                    <ul class="mini-list">
+                                        <li>Includes full legal contracts ready for copy-pasting.</li>
+                                        <li>Decoy pricing psychology illustrated via accessible real-world examples.</li>
+                                    </ul>
+                                </div>
+                                <div class="con-card">
+                                    <div class="card-header-mini con-title"><span>!</span> Improvement Areas</div>
+                                    <ul class="mini-list">
+                                        <li>Fix platform typos: <em>Payoneer</em> (not Pioneer), <em>Beehiiv</em> (not Beehive), <em>ClickFunnels</em> (not ClickFunnel).</li>
+                                        <li>Fix typo on p.6: "copyright" used where "copywriting" is meant.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ch 2 -->
+                    <div class="chapter-box">
+                        <div class="chapter-header">
+                            <span class="chapter-number">CHAPTER 02</span>
+                            <span class="chapter-name">Content Creation Strategies (Organic Distribution & SEO)</span>
+                            <span class="chapter-rating rating-high">8.5 / 10</span>
+                        </div>
+                        <div class="chapter-body">
+                            <p class="chapter-summary">
+                                Outlines multi-channel organic distribution: YouTube algorithm warmup, short-form video slicing (TikTok, Reels, Shorts), blogging CMS platforms (Ghost, WordPress, Wix), social mechanics (Pinterest, X, LinkedIn, Instagram), keyword competitiveness scoring (0-100 scale), and PR outreach.
+                            </p>
+                            <div class="analysis-grid">
+                                <div class="pro-card">
+                                    <div class="card-header-mini pro-title"><span>✓</span> Standout Strengths</div>
+                                    <ul class="mini-list">
+                                        <li>Pragmatic focus on training algorithm recommendation engines early rather than chasing vanity virality.</li>
+                                    </ul>
+                                </div>
+                                <div class="con-card">
+                                    <div class="card-header-mini con-title"><span>!</span> Improvement Areas</div>
+                                    <ul class="mini-list">
+                                        <li>Needs integration of modern paid distribution (Meta Advantage+ Shopping, TikTok Shop).</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ch 3 -->
+                    <div class="chapter-box">
+                        <div class="chapter-header">
+                            <span class="chapter-number">CHAPTER 03</span>
+                            <span class="chapter-name">Why People Buy (Consumer Psychology & Market Gaps)</span>
+                            <span class="chapter-rating rating-high">9.2 / 10</span>
+                        </div>
+                        <div class="chapter-body">
+                            <p class="chapter-summary">
+                                Synthesizes the 3 Primal Desires (Wealth, Health, Relationships) and Tony Robbins' 6 Human Needs (Certainty, Variety, Significance, Connection, Growth, Contribution), illustrated by a brilliant deconstruction of Nike's brand positioning. Introduces the ecosystem vs. product dichotomy and the mantra: <em>"Do what's required, not your best."</em>
+                            </p>
+                            <div class="analysis-grid">
+                                <div class="pro-card">
+                                    <div class="card-header-mini pro-title"><span>✓</span> Standout Strengths</div>
+                                    <ul class="mini-list">
+                                        <li>Nike 6-needs breakdown is a masterclass in brand psychology.</li>
+                                        <li>"Do what's required, not your best" breaks founders out of self-indulgent effort traps.</li>
+                                    </ul>
+                                </div>
+                                <div class="con-card">
+                                    <div class="card-header-mini con-title"><span>!</span> Improvement Areas</div>
+                                    <ul class="mini-list">
+                                        <li>Visual Venn diagrams and hierarchy charts will make the concepts unforgettable.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ch 4 & 5 -->
+                    <div class="chapter-box">
+                        <div class="chapter-header">
+                            <span class="chapter-number">CHAPTER 04 & 05</span>
+                            <span class="chapter-name">Pre-Launch Essentials & The 5 Essential SOPs</span>
+                            <span class="chapter-rating rating-high">9.5 / 10</span>
+                        </div>
+                        <div class="chapter-body">
+                            <p class="chapter-summary">
+                                Defines the core taxonomy of operational governance: <strong>Policy</strong> (rules/boundaries) $ightarrow$ <strong>Process</strong> (sequences) $ightarrow$ <strong>System</strong> (tools/interfaces/people) $ightarrow$ <strong>SOP</strong> (recipe with If-Then logic gates). Covers the Customer, Product, and Business pillars and provides the 5 Essential SOPs (Marketing, Sales, Onboarding, Fulfillment, Offboarding).
+                            </p>
+                            <div class="analysis-grid">
+                                <div class="pro-card">
+                                    <div class="card-header-mini pro-title"><span>✓</span> Standout Strengths</div>
+                                    <ul class="mini-list">
+                                        <li>McDonald's-grade systematization for solopreneurs.</li>
+                                        <li>Algorithmic logic gates ("If Action A != Output 1, take Action B").</li>
+                                    </ul>
+                                </div>
+                                <div class="con-card">
+                                    <div class="card-header-mini con-title"><span>!</span> Improvement Areas</div>
+                                    <ul class="mini-list">
+                                        <li>Package as a pre-built, duplicate-ready Notion workspace kit.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ch 6 -->
+                    <div class="chapter-box">
+                        <div class="chapter-header">
+                            <span class="chapter-number">CHAPTER 06</span>
+                            <span class="chapter-name">Getting The Wheel Turning (Operational Execution Playbooks)</span>
+                            <span class="chapter-rating rating-med">7.8 / 10</span>
+                        </div>
+                        <div class="chapter-body">
+                            <p class="chapter-summary">
+                                Execution blueprints for Digital Marketing Agencies / Drop-servicing (outbound prospecting, sales demo calls, managing white-label contractors, ad account access, 7-10 day pre-month-end client reviews), Content Review Sites, Affiliate Marketing, Dropshipping, and Physical E-commerce inventory management.
+                            </p>
+                            <div class="analysis-grid">
+                                <div class="pro-card">
+                                    <div class="card-header-mini pro-title"><span>✓</span> Standout Strengths</div>
+                                    <ul class="mini-list">
+                                        <li>Agency contractor-client triangular workflow is exceptionally realistic.</li>
+                                        <li>7-10 day month-end client retention review prevents unexpected churn.</li>
+                                    </ul>
+                                </div>
+                                <div class="con-card">
+                                    <div class="card-header-mini con-title"><span>!</span> Improvement Areas</div>
+                                    <ul class="mini-list">
+                                        <li><strong>Scope Mismatch:</strong> 60%+ of the chapter focuses on B2B agencies rather than retail e-commerce.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ch 7 -->
+                    <div class="chapter-box">
+                        <div class="chapter-header">
+                            <span class="chapter-number">CHAPTER 07</span>
+                            <span class="chapter-name">Functionality to Consider (Business Automation & AI Workflows)</span>
+                            <span class="chapter-rating rating-high">8.5 / 10</span>
+                        </div>
+                        <div class="chapter-body">
+                            <p class="chapter-summary">
+                                Explores automation leverage via Zapier and Integromat (Make) connecting Shopify to Google Sheets for automated net profit bookkeeping. Maps multi-AI chains: Notion prompt bank $ightarrow$ ChatGPT $ightarrow$ Google Docs $ightarrow$ Jasper/Rytr $ightarrow$ ElevenLabs $ightarrow$ Canva bulk image generation.
+                            </p>
+                            <div class="analysis-grid">
+                                <div class="pro-card">
+                                    <div class="card-header-mini pro-title"><span>✓</span> Standout Strengths</div>
+                                    <ul class="mini-list">
+                                        <li>Actionable blueprint for chaining specialized AI tools into an automated publishing engine.</li>
+                                    </ul>
+                                </div>
+                                <div class="con-card">
+                                    <div class="card-header-mini con-title"><span>!</span> Improvement Areas</div>
+                                    <ul class="mini-list">
+                                        <li>Update tool rebrands (Integromat is now Make; fix "Zappier" spelling).</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ch 8 -->
+                    <div class="chapter-box">
+                        <div class="chapter-header">
+                            <span class="chapter-number">CHAPTER 08</span>
+                            <span class="chapter-name">Becoming Successful Is Painful, But It's Worth It (Founder Mindset)</span>
+                            <span class="chapter-rating rating-med">7.5 / 10</span>
+                        </div>
+                        <div class="chapter-body">
+                            <p class="chapter-summary">
+                                Discusses the psychological grit needed to overcome startup mortality, social isolation, and failures. Features the "Need to Breathe" urgency metaphor.
+                            </p>
+                            <div class="analysis-grid">
+                                <div class="pro-card">
+                                    <div class="card-header-mini pro-title"><span>✓</span> Standout Strengths</div>
+                                    <ul class="mini-list">
+                                        <li>Raw, unfiltered honesty about startup difficulty and emotional stamina.</li>
+                                    </ul>
+                                </div>
+                                <div class="con-card">
+                                    <div class="card-header-mini con-title"><span>!</span> Improvement Areas</div>
+                                    <ul class="mini-list">
+                                        <li>Reframe the advice to <em>"sacrifice your own health, deprive yourself of sleep and eat once a day"</em> into <strong>athletic high-performance, ruthless focus, and cognitive recovery</strong>.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Section 3: AuraWorks Architecture -->
+            <section id="auraworks-architecture" class="section-card">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-icon">⚡</span>
+                        3. The Founder's Evolution & AuraWorks (Pty) Ltd Architecture
+                    </h2>
+                    <span class="badge badge-primary">Corporate Model</span>
+                </div>
+
+                <p style="font-size: 0.95rem; color: #334155; margin-bottom: 1.25rem;">
+                    AuraWorks operates on a pure variable-cost, high-margin contractor arbitrage model. The founder acts as the technical architect, quality gate, and system administrator while variable teams handle deal origination and project execution.
+                </p>
+
+                <!-- Flow Diagram -->
+                <div class="flow-container">
+                    <div style="color: #a5b4fc; font-weight: bold; margin-bottom: 1rem;">// THE AURAWORKS VARIABLE ARBITRAGE ENGINE</div>
+                    <div class="flow-diagram">
+                        <div class="flow-step">
+                            <div style="color: #38bdf8; font-weight: bold;">LEAD ENGINE</div>
+                            <div style="font-size: 0.75rem; color: #94a3b8; margin-top: 0.25rem;">Automated Scrapers</div>
+                        </div>
+                        <div class="flow-arrow">──►</div>
+                        <div class="flow-step">
+                            <div style="color: #34d399; font-weight: bold;">COMMISSION SALES</div>
+                            <div style="font-size: 0.75rem; color: #94a3b8; margin-top: 0.25rem;">10–15% on Close</div>
+                        </div>
+                        <div class="flow-arrow">──►</div>
+                        <div class="flow-step" style="border-color: #6366f1; background: #1e1b4b;">
+                            <div style="color: #a5b4fc; font-weight: bold;">AURAWORKS CORE</div>
+                            <div style="font-size: 0.75rem; color: #cbd5e1; margin-top: 0.25rem;">Allen (Code/QA/SOPs)</div>
+                        </div>
+                        <div class="flow-arrow">──►</div>
+                        <div class="flow-step">
+                            <div style="color: #fbbf24; font-weight: bold;">PROJECT VENDORS</div>
+                            <div style="font-size: 0.75rem; color: #94a3b8; margin-top: 0.25rem;">Milestone Escrow</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unit Economics Box -->
+                <div class="callout-box" style="background: #f0fdf4; border-color: #bbf7d0; border-left-color: #22c55e;">
+                    <div class="callout-title" style="color: #15803d;"><span>💰</span> Target Unit Economics (Per $4,000 Deal)</div>
+                    <div class="callout-text" style="color: #166534;">
+                        <strong>Gross Revenue:</strong> $4,000 &nbsp;|&nbsp; 
+                        <strong>Contractor Milestone Delivery:</strong> $1,200 (30%) &nbsp;|&nbsp; 
+                        <strong>Sales Rep Commission:</strong> $600 (15%) &nbsp;|&nbsp; 
+                        <strong>AuraWorks Net Margin:</strong> <span style="background: #dcfce7; padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 800;">$2,200 (55% Net Margin)</span> with zero fixed payroll overhead.
+                    </div>
+                </div>
+
+                <!-- Section 3a: Bottlenecks -->
+                <div id="bottlenecks-fixes" style="margin-top: 2rem;">
+                    <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1.25rem; color: var(--dark);">
+                        The 3 Critical Operational Bottlenecks & Fixes
+                    </h3>
+
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Vulnerability</th>
+                                <th>Core Failure Mechanism</th>
+                                <th>Tactical AuraWorks Fix</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong style="color: #b91c1c;">1. Sales Rep Churn</strong></td>
+                                <td>Commission reps quit within 14–21 days if deals take too long to close or leads are cold.</td>
+                                <td>Use custom Python scrapers to feed reps <strong>pre-verified, high-intent lead lists</strong>. Provide objection cheat sheets and pay commissions immediately on invoice clearance.</td>
+                            </tr>
+                            <tr>
+                                <td><strong style="color: #b91c1c;">2. The Contractor Quality Trap</strong></td>
+                                <td>Freelancers ghost, deliver buggy work, or miss deadlines near launch.</td>
+                                <td>Implement <strong>30/30/40 milestone escrow</strong>, enforce the <strong>5-7 Day Buffer Rule</strong> (internal deadline well before client deadline), and maintain a strict <strong>Black-Box Interface</strong> (clients never contact contractors directly).</td>
+                            </tr>
+                            <tr>
+                                <td><strong style="color: #b91c1c;">3. Generalist Offer Trap</strong></td>
+                                <td>Selling "general web dev and marketing" leads to low prices and slow sales cycles.</td>
+                                <td>Package a <strong>High-ROI Productized Painkiller Offer</strong> (e.g., <em>"Automated AI Lead Intake & Speed-to-Lead CRM Pipelines in 14 Days"</em>).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Section 4: Pricing & Monetization -->
+            <section id="pricing-strategy" class="section-card">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-icon">💳</span>
+                        4. Book Pricing & Modern Monetization Strategy
+                    </h2>
+                    <span class="badge badge-info">Commercial Strategy</span>
+                </div>
+
+                <p style="font-size: 0.95rem; color: #334155; margin-bottom: 1.25rem;">
+                    In the modern digital landscape, information alone is a commodity; <strong>speed, execution files, and structured templates</strong> command premium pricing.
+                </p>
+
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Format</th>
+                            <th>USD Price</th>
+                            <th>ZAR Price</th>
+                            <th>Strategic Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1. Standalone PDF E-Book</strong></td>
+                            <td><span class="code-tag">$9.99 – $14.99</span></td>
+                            <td><span class="code-tag">R180 – R270</span></td>
+                            <td>Low-friction impulse buy for newsletter readers and social followers.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2. Self-Liquidating Front-End</strong></td>
+                            <td><span class="code-tag">$4.99 – $7.00</span></td>
+                            <td><span class="code-tag">R90 – R130</span></td>
+                            <td>Converts social followers into paying customers at zero net advertising acquisition cost.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3. Turnkey Toolkit Bundle</strong></td>
+                            <td><span class="code-tag">$29.00 – $47.00</span></td>
+                            <td><span class="code-tag">R550 – R890</span></td>
+                            <td>PDF + Notion SOP Templates + Editable Word Contracts + Zapier Blueprints.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4. Authority Lead Magnet</strong></td>
+                            <td><span class="code-tag">Free ($0)</span></td>
+                            <td><span class="code-tag">Free (R0)</span></td>
+                            <td>Onboarding manual for sales reps and credibility piece for high-ticket B2B clients.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Section 5: PR & Youth Mission -->
+            <section id="pr-personal-brand" class="section-card">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-icon">🇿🇦</span>
+                        5. Personal Brand, PR Move & The South African Youth Mission
+                    </h2>
+                    <span class="badge badge-success">High Organic Leverage</span>
+                </div>
+
+                <div class="callout-box" style="background: #e0f2fe; border-color: #bae6fd; border-left-color: #0284c7;">
+                    <div class="callout-title" style="color: #0369a1;"><span>🎯</span> The "Anti-Guru" Advantage</div>
+                    <div class="callout-text" style="color: #075985;">
+                        In South Africa, where youth unemployment exceeds 45%, young people are exhausted by predatory "Forex mentors" renting supercars. Position yourself as a <strong>real technical builder and systems architect who open-sources the startup playbook for free</strong> while monetizing enterprise B2B clients through AuraWorks.
+                    </div>
+                </div>
+
+                <div class="matrix-grid">
+                    <div class="matrix-box strength">
+                        <h3 class="matrix-title"><span>🌟</span> The Builder Aesthetic</h3>
+                        <ul class="mini-list">
+                            <li>Show terminal code, Notion dashboards, and logic gates.</li>
+                            <li>Transparent discussions about failed cold calls & contractor bugs.</li>
+                            <li>Focus on hard skills: <strong>Code + Sales + Legal SOPs</strong>.</li>
+                        </ul>
+                    </div>
+                    <div class="matrix-box weakness">
+                        <h3 class="matrix-title" style="color: #b91c1c;"><span>🚫</span> The Guru Traps (Avoid)</h3>
+                        <ul class="mini-list">
+                            <li>Rented sports cars, hotel lounges, and luxury flexes.</li>
+                            <li>Vague "manifestation / mindset only" without mechanical blueprints.</li>
+                            <li>Promising effortless overnight passive riches.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Personal Website Layout -->
+                <h3 style="font-size: 1.15rem; font-weight: 800; margin: 2rem 0 1rem 0; color: var(--dark);">
+                    Personal PR Hub Website Architecture (Next.js / Tailwind)
+                </h3>
+                <div class="flow-container">
+                    <div style="color: #cbd5e1; line-height: 1.8;">
+                        <strong>[1. HERO MANIFESTO]</strong>: "Building Systems. Writing Code. Democratizing Entrepreneurship."<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;└── Subhead: Allen Sethabela • Founder, AuraWorks (Pty) Ltd.<br>
+                        <strong>[2. THE 19-TO-23 INTERACTIVE TIMELINE]</strong>:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;├── <em>Age 19 (2022)</em>: 75-Page Blueprint & Research Synthesis<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;├── <em>Ages 20–22 (2023–2025)</em>: Coding, API Automation, Frontline B2B Sales<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;└── <em>Age 23 (2026)</em>: Launching AuraWorks (Pty) Ltd & Contractor Arbitrage<br>
+                        <strong>[3. THE OPEN PLAYBOOK]</strong>: Free Download of the Book & Notion SOP Templates<br>
+                        <strong>[4. THE CORE THESIS]</strong>: Earning in Dollars/Pounds, Spending in Rands<br>
+                        <strong>[5. WHAT I'M BUILDING]</strong>: AuraWorks Enterprise Solutions & Case Studies<br>
+                        <strong>[6. CONNECT / MEDIA]</strong>: Speaking, Podcast Outreach & Newsletter
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 6: Action Roadmap -->
+            <section id="action-roadmap" class="section-card">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-icon">🚀</span>
+                        6. Integrated 3-Phase Action Roadmap
+                    </h2>
+                    <span class="badge badge-primary">Execution Plan</span>
+                </div>
+
+                <div class="roadmap-timeline">
+                    
+                    <div class="roadmap-step">
+                        <div class="roadmap-node"></div>
+                        <div class="roadmap-content">
+                            <h4 class="roadmap-title">Phase 1: Immediate Launch & Lead Tooling (Weeks 1–2)</h4>
+                            <p class="roadmap-desc">
+                                • Launch the Personal PR Website with the 19-to-23 timeline and free book download.<br>
+                                • Write Python scraping scripts to supply AuraWorks commission sales reps with verified, high-intent leads.<br>
+                                • Standardize sales rep onboarding with 1-page objection cheat sheets.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-step">
+                        <div class="roadmap-node"></div>
+                        <div class="roadmap-content">
+                            <h4 class="roadmap-title">Phase 2: Productization & Vendor Controls (Weeks 3–4)</h4>
+                            <p class="roadmap-desc">
+                                • Convert the 5 Essential SOPs and contract agreements into a turnkey <strong>Notion Toolkit</strong>.<br>
+                                • Package the $37 "Founder Toolkit Bundle" as an optional instant-execution upsell.<br>
+                                • Enforce the 30/30/40 milestone payment escrow and 5-day buffer rule for all contractors.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-step">
+                        <div class="roadmap-node"></div>
+                        <div class="roadmap-content">
+                            <h4 class="roadmap-title">Phase 3: Authority Flywheel & B2B Expansion (Months 2–3)</h4>
+                            <p class="roadmap-desc">
+                                • Publish 2–3 technical breakdown case studies per week on LinkedIn and X.<br>
+                                • Pitch South African tech media (<em>Disrupt Africa, Ventureburn, tech podcasts</em>) on the open-source youth empowerment story.<br>
+                                • Integrate real client case studies from AuraWorks into a 2nd Edition of the book.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p><strong>AuraWorks Strategic Blueprint & Book Audit</strong> • Prepared for Reitumetse Bokang Allen Sethabela (Allen Reiley)</p>
+        <p style="margin-top: 0.35rem; font-size: 0.8rem; color: #94a3b8;">AuraWorks (Pty) Ltd • South Africa • Master File</p>
+    </footer>
+
+</div>
+
+</body>
+</html>

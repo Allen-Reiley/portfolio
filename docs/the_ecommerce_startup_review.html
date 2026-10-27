@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Review & Strategic Analysis: The Ecommerce Startup That Sells</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #3730a3;
+            --primary-light: #e0e7ff;
+            --secondary: #0ea5e9;
+            --accent: #f59e0b;
+            --success: #10b981;
+            --danger: #ef4444;
+            --dark-bg: #0f172a;
+            --card-bg: #ffffff;
+            --body-bg: #f8fafc;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --border-light: #f1f5f9;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--body-bg);
+            color: var(--text-main);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 5rem 1.5rem;
+        }
+
+        /* Top Header Hero */
+        .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+            color: white;
+            padding: 3.5rem 2.5rem;
+            border-radius: var(--radius-xl);
+            margin-bottom: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.25) 0%, rgba(0, 0, 0, 0) 70%);
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            font-size: 0.825rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 1.25rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: #cbd5e1;
+            max-width: 850px;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .hero-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.25rem;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.25rem 1.5rem;
+            border-radius: var(--radius-lg);
+            backdrop-filter: blur(8px);
+        }
+
+        .hero-meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-meta-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #94a3b8;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .hero-meta-value {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #f8fafc;
+        }
+
+        /* Layout Grid */
+        .layout-grid {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        @media (max-width: 1024px) {
+            .layout-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Sticky Sidebar Navigation */
+        .sidebar {
+            position: sticky;
+            top: 1.5rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.25rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .sidebar-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.6rem 0.85rem;
+            border-radius: var(--radius-sm);
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.15s ease;
+        }
+
+        .nav-link:hover {
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+        }
+
+        .nav-badge {
+            font-size: 0.75rem;
+            background: var(--border-light);
+            padding: 0.15rem 0.45rem;
+            border-radius: 6px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .section-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            padding: 2.25rem;
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow 0.2s ease;
+        }
+
+        .section-card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--dark-bg);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .section-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: var(--radius-sm);
+            font-size: 1.1rem;
+        }
+
+        /* Scorecard Section */
+        .scorecard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .score-card {
+            background: var(--body-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            position: relative;
+        }
+
+        .score-card-title {
+            font-size: 0.825rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .score-card-value {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--dark-bg);
+            display: flex;
+            align-items: baseline;
+            gap: 0.25rem;
+        }
+
+        .score-card-value span {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .progress-bar-bg {
+            height: 6px;
+            background: var(--border);
+            border-radius: 9999px;
+            margin-top: 0.75rem;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            border-radius: 9999px;
+            transition: width 0.3s ease;
+        }
+
+        .bg-indigo { background: #6366f1; }
+        .bg-emerald { background: #10b981; }
+        .bg-amber { background: #f59e0b; }
+        .bg-sky { background: #0ea5e9; }
+        .bg-rose { background: #f43f5e; }
+        .bg-purple { background: #a855f7; }
+
+        /* Executive Summary Callout */
+        .verdict-box {
+            background: linear-gradient(to right, #f0fdf4, #ecfdf5);
+            border: 1px solid #bbf7d0;
+            border-left: 5px solid #22c55e;
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            margin-bottom: 1.5rem;
+        }
+
+        .verdict-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #15803d;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .verdict-text {
+            color: #166534;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Chapters Breakdown */
+        .chapter-box {
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            background: #ffffff;
+        }
+
+        .chapter-header {
+            background: #f8fafc;
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .chapter-number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 0.2rem 0.6rem;
+            border-radius: 6px;
+            letter-spacing: 0.05em;
+        }
+
+        .chapter-name {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--dark-bg);
+            flex: 1;
+            margin-left: 0.75rem;
+        }
+
+        .chapter-rating {
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 0.25rem 0.65rem;
+            border-radius: 9999px;
+            background: #e2e8f0;
+            color: #334155;
+        }
+
+        .rating-high { background: #dcfce7; color: #15803d; }
+        .rating-med { background: #fef3c7; color: #b45309; }
+        .rating-low { background: #fee2e2; color: #b91c1c; }
+
+        .chapter-body {
+            padding: 1.5rem;
+        }
+
+        .chapter-summary {
+            font-size: 0.95rem;
+            color: #334155;
+            margin-bottom: 1.25rem;
+            line-height: 1.65;
+        }
+
+        .key-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .topic-pill {
+            background: var(--body-bg);
+            border: 1px solid var(--border);
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .analysis-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .pro-card {
+            background: #f0fdf4;
+            border: 1px solid #dcfce7;
+            border-radius: var(--radius-md);
+            padding: 1rem 1.25rem;
+        }
+
+        .con-card {
+            background: #fff1f2;
+            border: 1px solid #ffe4e6;
+            border-radius: var(--radius-md);
+            padding: 1rem 1.25rem;
+        }
+
+        .card-header-mini {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .pro-title { color: #16a34a; }
+        .con-title { color: #e11d48; }
+
+        .mini-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            font-size: 0.875rem;
+            color: #334155;
+        }
+
+        .mini-list li {
+            position: relative;
+            padding-left: 1.2rem;
+        }
+
+        .mini-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0.2rem;
+            font-weight: bold;
+        }
+
+        .pro-card .mini-list li::before { color: #16a34a; }
+        .con-card .mini-list li::before { color: #e11d48; }
+
+        /* Tables */
+        .styled-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .styled-table th {
+            background: #f8fafc;
+            padding: 0.85rem 1rem;
+            font-weight: 700;
+            text-align: left;
+            color: var(--dark-bg);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .styled-table td {
+            padding: 0.85rem 1rem;
+            border-bottom: 1px solid var(--border);
+            color: #334155;
+            vertical-align: top;
+        }
+
+        .styled-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .styled-table tr:hover td {
+            background-color: #f8fafc;
+        }
+
+        /* Matrix Cards */
+        .matrix-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .matrix-box {
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            background: #ffffff;
+        }
+
+        .matrix-box.strength {
+            border-top: 4px solid var(--success);
+        }
+
+        .matrix-box.weakness {
+            border-top: 4px solid var(--danger);
+        }
+
+        .matrix-box.opportunity {
+            border-top: 4px solid var(--secondary);
+        }
+
+        .matrix-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Roadmap Steps */
+        .roadmap-timeline {
+            position: relative;
+            padding-left: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .roadmap-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0.5rem;
+            bottom: 0.5rem;
+            left: 0.65rem;
+            width: 2px;
+            background: var(--border);
+        }
+
+        .roadmap-step {
+            position: relative;
+        }
+
+        .roadmap-node {
+            position: absolute;
+            left: -2rem;
+            top: 0.15rem;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 4px solid #ffffff;
+            box-shadow: 0 0 0 2px var(--primary-light);
+        }
+
+        .roadmap-content {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+        }
+
+        .roadmap-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--dark-bg);
+            margin-bottom: 0.4rem;
+        }
+
+        .roadmap-desc {
+            font-size: 0.88rem;
+            color: #475569;
+            line-height: 1.55;
+        }
+
+        /* Quotes & Code Callouts */
+        .quote-box {
+            font-style: italic;
+            background: #f8fafc;
+            border-left: 4px solid var(--primary);
+            padding: 1rem 1.25rem;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            margin: 1rem 0;
+            color: #475569;
+            font-size: 0.925rem;
+        }
+
+        .code-tag {
+            font-family: 'JetBrains Mono', monospace;
+            background: #f1f5f9;
+            color: #0f172a;
+            padding: 0.15rem 0.35rem;
+            border-radius: 4px;
+            font-size: 0.825rem;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 3rem;
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Utility classes */
+        .badge {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .badge-primary { background: var(--primary-light); color: var(--primary-dark); }
+        .badge-success { background: #dcfce7; color: #166534; }
+        .badge-warning { background: #fef3c7; color: #92400e; }
+        .badge-info { background: #e0f2fe; color: #075985; }
+
+        .text-bold { font-weight: 700; }
+        .text-indigo { color: var(--primary); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Top Hero Section -->
+    <header class="hero">
+        <div class="hero-badge">Comprehensive Book Analysis & Strategic Review</div>
+        <h1>The Ecommerce Startup That Sells</h1>
+        <p class="hero-subtitle">
+            Proven Strategies for Online Sales Success — A granular architectural review, pedagogical audit, and strategic expansion roadmap.
+        </p>
+
+        <div class="hero-meta-grid">
+            <div class="hero-meta-item">
+                <span class="hero-meta-label">Author</span>
+                <span class="hero-meta-value">Reitumetse Sethabela (Allen Reiley)</span>
+            </div>
+            <div class="hero-meta-item">
+                <span class="hero-meta-label">Length / Format</span>
+                <span class="hero-meta-value">75 Pages • 8 Core Chapters</span>
+            </div>
+            <div class="hero-meta-item">
+                <span class="hero-meta-label">Primary Theme</span>
+                <span class="hero-meta-value">Solopreneur Operations & Systems</span>
+            </div>
+            <div class="hero-meta-item">
+                <span class="hero-meta-label">Overall Evaluation</span>
+                <span class="hero-meta-value" style="color: #34d399;">8.2 / 10 • Strong Playbook</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="layout-grid">
+        
+        <!-- Sticky Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-title">Review Navigation</div>
+            <ul class="nav-list">
+                <li><a href="#executive-verdict" class="nav-link"><span>Executive Verdict</span> <span class="nav-badge">01</span></a></li>
+                <li><a href="#scorecard" class="nav-link"><span>Performance Scorecard</span> <span class="nav-badge">02</span></a></li>
+                <li><a href="#chapter-breakdown" class="nav-link"><span>Chapter-by-Chapter Audit</span> <span class="nav-badge">03</span></a></li>
+                <li><a href="#strengths-matrix" class="nav-link"><span>Key Strengths & Differentiators</span> <span class="nav-badge">04</span></a></li>
+                <li><a href="#critical-critique" class="nav-link"><span>Constructive Critiques</span> <span class="nav-badge">05</span></a></li>
+                <li><a href="#roadmap" class="nav-link"><span>Strategic 2.0 Roadmap</span> <span class="nav-badge">06</span></a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Stream -->
+        <main class="main-content">
+
+            <!-- Section 1: Executive Verdict -->
+            <section id="executive-verdict" class="section-card">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-icon">⚖️</span>
+                        Executive Verdict & Key Findings
+                    </h2>
+                    <span class="badge badge-success">High Practical Utility</span>
+                </div>
+
+                <div class="verdict-box">
+                    <div class="verdict-title">
+                        <span>🎯</span> Core Assessment: An Action-Oriented Solopreneur Operating System
+                    </div>
+                    <div class="verdict-text">
+                        <strong>"The Ecommerce Startup That Sells"</strong> is an impressively pragmatic, structured, and execution-heavy starter manual for aspiring digital entrepreneurs. Rather than offering empty motivational generalities, the book provides <strong>tangible legal templates, step-by-step SOP structures, copywriting formulas, and operational logic trees</strong> for bootstrapping an online operation from zero to cash-flow.
+                    </div>
+                </div>
+
+                <p style="margin-bottom: 1rem; color: #334155; font-size: 0.95rem;">
+                    While titled around <em>E-commerce</em>, the book is actually a broader and highly practical <strong>"Digital Solopreneur Blueprint"</strong> covering agency drop-servicing, affiliate marketing, content review hubs, and dropshipping. Its greatest strength lies in its <strong>systems-first mentality</strong> (emphasizing SOPs, contractor agreements, client onboarding, and automated AI workflows), which is rarely taught in introductory entrepreneurship literature.
+                </p>
+
+                <p style="color: #334155; font-size: 0.95rem;">
+                    With minor refinements in terminology consistency, the inclusion of modern paid advertising / unit economics (CAC, LTV, ROAS, 3PL logistics), and a more sustainable framing of the entrepreneurial mindset in Chapter 8, this piece stands out as a high-value entry point for anyone serious about building an online income engine.
+                </p>
+            </section>
+
+            <!-- Section 2: Performance Scorecard -->
+            <section id="scorecard" class="section-card">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-icon">📊</span>
+                        Dimensional Performance Scorecard
+                    </h2>
+                    <span class="badge badge-primary">Evaluation Matrix</span>
+                </div>
+
+                <div class="scorecard-grid">
+                    <div class="score-card">
+                        <div class="score-card-title">Actionability & Steps</div>
+                        <div class="score-card-value">9.2 <span>/ 10</span></div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill bg-emerald" style="width: 92%;"></div></div>
+                    </div>
+                    <div class="score-card">
+                        <div class="score-card-title">System & SOP Architecture</div>
+                        <div class="score-card-value">9.0 <span>/ 10</span></div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill bg-indigo" style="width: 90%;"></div></div>
+                    </div>
+                    <div class="score-card">
+                        <div class="score-card-title">Psychology & Copywriting</div>
+                        <div class="score-card-value">8.8 <span>/ 10</span></div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill bg-sky" style="width: 88%;"></div></div>
+                    </div>
+                    <div class="score-card">
+                        <div class="score-card-title">AI & Tech Workflows</div>
+                        <div class="score-card-value">8.2 <span>/ 10</span></div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill bg-purple" style="width: 82%;"></div></div>
+                    </div>
+                    <div class="score-card">
+                        <div class="score-card-title">E-commerce Scope Alignment</div>
+                        <div class="score-card-value">7.0 <span>/ 10</span></div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill bg-amber" style="width: 70%;"></div></div>
+                    </div>
+                    <div class="score-card">
+                        <div class="score-card-title">Editorial & Nomenclature Polish</div>
+                        <div class="score-card-value">7.2 <span>/ 10</span></div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill bg-rose" style="width: 72%;"></div></div>
+                    </div>
+                </div>
+
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Dimension</th>
+                            <th>Score</th>
+                            <th>Key Observation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong class="text-indigo">Practical Actionability</strong></td>
+                            <td><span class="badge badge-success">9.2 / 10</span></td>
+                            <td>Provides step-by-step logic gates, exact email funnel structures, sales scripts, contract templates, and pricing ladders.</td>
+                        </tr>
+                        <tr>
+                            <td><strong class="text-indigo">SOP & Operational Rigor</strong></td>
+                            <td><span class="badge badge-success">9.0 / 10</span></td>
+                            <td>Distinguishes clearly between Policies, Processes, Systems, and Standard Operating Procedures across Customer, Product, and Business pillars.</td>
+                        </tr>
+                        <tr>
+                            <td><strong class="text-indigo">Consumer Psychology</strong></td>
+                            <td><span class="badge badge-success">8.8 / 10</span></td>
+                            <td>Deeply explores the 3 Primal Desires (Wealth, Health, Relationships) and Tony Robbins' 6 Human Needs with the Nike positioning case study.</td>
+                        </tr>
+                        <tr>
+                            <td><strong class="text-indigo">Automation & Modern Stack</strong></td>
+                            <td><span class="badge badge-info">8.2 / 10</span></td>
+                            <td>Integrates Zapier/Make, Notion, ChatGPT prompt chains, ElevenLabs, and Canva bulk workflows for solopreneur scalability.</td>
+                        </tr>
+                        <tr>
+                            <td><strong class="text-indigo">Title vs. Content Alignment</strong></td>
+                            <td><span class="badge badge-warning">7.0 / 10</span></td>
+                            <td>The title says "Ecommerce", but the core walkthroughs heavily emphasize digital marketing agencies, drop-servicing, and affiliate websites.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Section 3: Chapter-by-Chapter Breakdown -->
+            <section id="chapter-breakdown" class="section-card">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-icon">📖</span>
+                        Granular Chapter-by-Chapter Audit
+                    </h2>
+                    <span class="badge badge-primary">8 Chapters Reviewed</span>
+                </div>
+
+                <!-- Chapter 1 -->
+                <div class="chapter-box">
+                    <div class="chapter-header">
+                        <span class="chapter-number">CHAPTER 01</span>
+                        <span class="chapter-name">Getting Started (Ideation, Positioning, Pricing & Funnels)</span>
+                        <span class="chapter-rating rating-high">9.0 / 10</span>
+                    </div>
+                    <div class="chapter-body">
+                        <p class="chapter-summary">
+                            A thorough 30-page powerhouse covering business models (Dropshipping, Amazon FBA, Affiliate, Agency, Content, Newsletters), niche discovery using the 3-circle Ikigai Venn diagram (Passion, Competence, Market Gap), MVP design, legal contracts, decoy pricing ($5/$8/$9 burger model), copywriting frameworks (AIDA, PAS, FAB, 4Ps), and email marketing mechanics (deliverability, subject line curiosity, 80/20 value/pitch cadence).
+                        </p>
+                        <div class="key-topics">
+                            <span class="topic-pill">Ikigai Venn Diagram</span>
+                            <span class="topic-pill">Decoy Pricing</span>
+                            <span class="topic-pill">Independent Trader Contract</span>
+                            <span class="topic-pill">AIDA / PAS / FAB / 4Ps</span>
+                            <span class="topic-pill">Email Deliverability & Spam Traps</span>
+                            <span class="topic-pill">WIIFM & Hero Landing Pages</span>
+                        </div>
+                        <div class="analysis-grid">
+                            <div class="pro-card">
+                                <div class="card-header-mini pro-title"><span>✓</span> Standout Strengths</div>
+                                <ul class="mini-list">
+                                    <li>Includes full legal contract structures for both clients and independent contractors.</li>
+                                    <li>Explains decoy pricing psychology with a clean fast-food sizing example.</li>
+                                    <li>Gives concrete email deliverability rules (avoiding spam triggers, warming up lists).</li>
+                                </ul>
+                            </div>
+                            <div class="con-card">
+                                <div class="card-header-mini con-title"><span>!</span> Improvement Areas</div>
+                                <ul class="mini-list">
+                                    <li>Mentions "copyright" instead of "copywriting" in page 6 ("selling, closing and copyright included").</li>
+                                    <li>Platform typos: "Pioneer" instead of <em>Payoneer</em>; "Beehive" instead of <em>Beehiiv</em>; "ClickFunnel" instead of <em>ClickFunnels</em>.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chapter 2 -->
+                <div class="chapter-box">
+                    <div class="chapter-header">
+                        <span class="chapter-number">CHAPTER 02</span>
+                        <span class="chapter-name">Content Creation Strategies (Organic Distribution & SEO)</span>
+                        <span class="chapter-rating rating-high">8.5 / 10</span>
+                    </div>
+                    <div class="chapter-body">
+                        <p class="chapter-summary">
+                            Focuses on multi-channel distribution: YouTube algorithmic warmup, short-form video slicing (TikTok, Reels, Shorts), blogging CMS platforms (WordPress, Ghost, Wix, Squarespace), organic social media mechanics (Pinterest, X, LinkedIn, Instagram), keyword competitiveness scoring (0-100 scale), and PR / podcast guesting outreach.
+                        </p>
+                        <div class="key-topics">
+                            <span class="topic-pill">YouTube Algorithm Training</span>
+                            <span class="topic-pill">7:3 & 8:2 Topical Authority Ratios</span>
+                            <span class="topic-pill">Social Platform Characteristics</span>
+                            <span class="topic-pill">SEO Competitiveness Scoring</span>
+                            <span class="topic-pill">Media Feature Funnels</span>
+                        </div>
+                        <div class="analysis-grid">
+                            <div class="pro-card">
+                                <div class="card-header-mini pro-title"><span>✓</span> Standout Strengths</div>
+                                <ul class="mini-list">
+                                    <li>Smart advice on not aiming for vanity virality early on, but rather training the algorithm on core audience data.</li>
+                                    <li>Explains topical authority and content clusters clearly.</li>
+                                </ul>
+                            </div>
+                            <div class="con-card">
+                                <div class="card-header-mini con-title"><span>!</span> Improvement Areas</div>
+                                <ul class="mini-list">
+                                    <li>Does not touch on paid distribution (Meta Ads, TikTok Ads, Google Performance Max) which is essential for scaling fast.</li>
+                                    <li>Could detail modern programmatic SEO and entity-based semantic search.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chapter 3 -->
+                <div class="chapter-box">
+                    <div class="chapter-header">
+                        <span class="chapter-number">CHAPTER 03</span>
+                        <span class="chapter-name">Why People Buy (Consumer Psychology & Market Gaps)</span>
+                        <span class="chapter-rating rating-high">9.2 / 10</span>
+                    </div>
+                    <div class="chapter-body">
+                        <p class="chapter-summary">
+                            A masterclass in consumer behavioral drivers. Synthesizes the 3 Primal Desires (Wealth, Health, Relationships), Tony Robbins' 6 Human Needs (Certainty, Uncertainty/Variety, Significance, Connection, Growth, Contribution), and illustrates them with a brilliant deconstruction of Nike's brand positioning. Contrasts Product vs. Distribution vs. Ecosystem and introduces the vital mindset: <em>"Do what's required, not your best."</em>
+                        </p>
+                        <div class="key-topics">
+                            <span class="topic-pill">3 Primal Desires</span>
+                            <span class="topic-pill">6 Human Needs</span>
+                            <span class="topic-pill">Nike Brand Deconstruction</span>
+                            <span class="topic-pill">Product vs. Distribution vs. Ecosystem</span>
+                            <span class="topic-pill">Apple vs. Samsung Positioning</span>
+                            <span class="topic-pill">Trust & Referral Engines</span>
+                        </div>
+                        <div class="analysis-grid">
+                            <div class="pro-card">
+                                <div class="card-header-mini pro-title"><span>✓</span> Standout Strengths</div>
+                                <ul class="mini-list">
+                                    <li>The Nike 6-needs breakdown is one of the strongest pedagogical sections in the entire book.</li>
+                                    <li>The distinction between a standalone product and an enduring ecosystem is elite.</li>
+                                    <li>The mantra "Do what's required, not your best" breaks founders out of self-indulgent effort traps.</li>
+                                </ul>
+                            </div>
+                            <div class="con-card">
+                                <div class="card-header-mini con-title"><span>!</span> Improvement Areas</div>
+                                <ul class="mini-list">
+                                    <li>Visual Venn diagrams and hierarchy charts would make the conceptual frameworks visually unforgettable.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chapter 4 & 5 -->
+                <div class="chapter-box">
+                    <div class="chapter-header">
+                        <span class="chapter-number">CHAPTER 04 & 05</span>
+                        <span class="chapter-name">Pre-Launch Essentials & The 5 Essential SOPs</span>
+                        <span class="chapter-rating rating-high">9.5 / 10</span>
+                    </div>
+                    <div class="chapter-body">
+                        <p class="chapter-summary">
+                            The operational backbone of the book. Defines the precise taxonomy of business governance: <strong>Policy</strong> (the law), <strong>Process</strong> (the sequence), <strong>System</strong> (the engine of tools, people, interfaces), and <strong>SOP</strong> (the exact recipe and execution logic). Breaks down the 3 core pillars (Customer, Product, Business) and provides the 5 essential SOPs: Marketing, Sales, Onboarding, Fulfillment, and Offboarding/Retention.
+                        </p>
+                        <div class="key-topics">
+                            <span class="topic-pill">Policy vs. Process vs. System vs. SOP</span>
+                            <span class="topic-pill">Logic-Gate / If-Then SOPs</span>
+                            <span class="topic-pill">Customer Pillar SOPs</span>
+                            <span class="topic-pill">Product Pillar SOPs</span>
+                            <span class="topic-pill">Business & Admin Pillar SOPs</span>
+                        </div>
+                        <div class="analysis-grid">
+                            <div class="pro-card">
+                                <div class="card-header-mini pro-title"><span>✓</span> Standout Strengths</div>
+                                <ul class="mini-list">
+                                    <li>Unmatched operational clarity — provides true "McDonald's-grade" systematization for solo founders.</li>
+                                    <li>Logic-gate decision trees ("If Action A != Output 1, then Action B") teach algorithmic business thinking.</li>
+                                    <li>Eliminates confusion between high-level policies and daily tactical SOPs.</li>
+                                </ul>
+                            </div>
+                            <div class="con-card">
+                                <div class="card-header-mini con-title"><span>!</span> Improvement Areas</div>
+                                <ul class="mini-list">
+                                    <li>Could include downloadable/fillable Notion or Google Docs template links for readers to immediately duplicate.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chapter 6 -->
+                <div class="chapter-box">
+                    <div class="chapter-header">
+                        <span class="chapter-number">CHAPTER 06</span>
+                        <span class="chapter-name">Getting The Wheel Turning (Operational Execution Playbooks)</span>
+                        <span class="chapter-rating rating-med">7.8 / 10</span>
+                    </div>
+                    <div class="chapter-body">
+                        <p class="chapter-summary">
+                            Provides concrete execution playbooks for multiple online business models: Digital Marketing Agency / Drop-servicing (finding clients, sales scripts, demo calls, managing white-label contractors, ad account access, 7-10 day month-end client reviews), Content Review Websites, Affiliate Marketing, Dropshipping, and Physical E-commerce (inventory, spreadsheets, secure database backups).
+                        </p>
+                        <div class="key-topics">
+                            <span class="topic-pill">Agency Drop-servicing Workflow</span>
+                            <span class="topic-pill">Sales Script & Demo Closings</span>
+                            <span class="topic-pill">Contractor Performance Checks</span>
+                            <span class="topic-pill">Month-End Client Retention Cycle</span>
+                            <span class="topic-pill">Dropshipping Vetting</span>
+                            <span class="topic-pill">Cloud Database & Spreadsheet Security</span>
+                        </div>
+                        <div class="analysis-grid">
+                            <div class="pro-card">
+                                <div class="card-header-mini pro-title"><span>✓</span> Standout Strengths</div>
+                                <ul class="mini-list">
+                                    <li>The agency client-contractor triangle workflow is exceptionally realistic and actionable.</li>
+                                    <li>The 7-10 day pre-month-end retention review prevents unexpected client churn.</li>
+                                </ul>
+                            </div>
+                            <div class="con-card">
+                                <div class="card-header-mini con-title"><span>!</span> Improvement Areas</div>
+                                <ul class="mini-list">
+                                    <li><strong>Thematic Mismatch:</strong> Over 60% of this chapter is dedicated to B2B agency/consulting operations rather than physical/digital e-commerce retail.</li>
+                                    <li>Physical e-commerce section is relatively brief (spreadsheets, database backups, dropshipper vetting) compared to the deep agency treatment.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chapter 7 -->
+                <div class="chapter-box">
+                    <div class="chapter-header">
+                        <span class="chapter-number">CHAPTER 07</span>
+                        <span class="chapter-name">Functionality to Consider (Business Automation & AI Workflows)</span>
+                        <span class="chapter-rating rating-high">8.5 / 10</span>
+                    </div>
+                    <div class="chapter-body">
+                        <p class="chapter-summary">
+                            Highlights leverage through automation and AI tooling. Describes full zap/scenario workflows connecting Shopify/e-commerce platforms to Google Sheets for automated bookkeeping, net income calculations, and monthly reporting. Outlines multi-tool AI pipelines: Notion keyword prompts → ChatGPT generation → Google Docs → Jasper/Rytr ad copywriting → ElevenLabs voice generation → Canva bulk graphics.
+                        </p>
+                        <div class="key-topics">
+                            <span class="topic-pill">Zapier & Integromat (Make)</span>
+                            <span class="topic-pill">Automated Accounting Pipelines</span>
+                            <span class="topic-pill">Notion + ChatGPT + Jasper Pipelines</span>
+                            <span class="topic-pill">ElevenLabs & Canva Bulk Content</span>
+                            <span class="topic-pill">AI as Solopreneur Workforce</span>
+                        </div>
+                        <div class="analysis-grid">
+                            <div class="pro-card">
+                                <div class="card-header-mini pro-title"><span>✓</span> Standout Strengths</div>
+                                <ul class="mini-list">
+                                    <li>Shows how to link multiple specialized AI tools into an automated end-to-end publishing engine.</li>
+                                    <li>Reassures founders to treat AI as a force-multiplier rather than a threat.</li>
+                                </ul>
+                            </div>
+                            <div class="con-card">
+                                <div class="card-header-mini con-title"><span>!</span> Improvement Areas</div>
+                                <ul class="mini-list">
+                                    <li>Spelling: "Zappier" instead of <em>Zapier</em>. Note that Integromat rebranded to <em>Make</em>.</li>
+                                    <li>Could introduce modern AI agent orchestration (like autonomous research sidecars & customer support bots).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chapter 8 -->
+                <div class="chapter-box">
+                    <div class="chapter-header">
+                        <span class="chapter-number">CHAPTER 08</span>
+                        <span class="chapter-name">Becoming Successful Is Painful, But It's Worth It (Founder Mindset)</span>
+                        <span class="chapter-rating rating-med">7.5 / 10</span>
+                    </div>
+                    <div class="chapter-body">
+                        <p class="chapter-summary">
+                            A raw, emotionally charged conclusion about the psychological price of entrepreneurship. Discusses the intense sacrifice required to climb into the top 1%, enduring loneliness, social sacrifice, and treating the pursuit of freedom with the urgency of fighting for air when suffocated.
+                        </p>
+                        <div class="key-topics">
+                            <span class="topic-pill">The Top 1% Crucible</span>
+                            <span class="topic-pill">The 'Need to Breathe' Urgency Metaphor</span>
+                            <span class="topic-pill">Sacrifice of Time & Relationships</span>
+                            <span class="topic-pill">Endurance & Scars of Business</span>
+                        </div>
+                        <div class="analysis-grid">
+                            <div class="pro-card">
+                                <div class="card-header-mini pro-title"><span>✓</span> Standout Strengths</div>
+                                <ul class="mini-list">
+                                    <li>Refreshingly honest about the emotional hardship, failures, and tenacity needed to survive early-stage startup death valleys.</li>
+                                    <li>The drowning/breathing metaphor instills a powerful sense of drive and focus.</li>
+                                </ul>
+                            </div>
+                            <div class="con-card">
+                                <div class="card-header-mini con-title"><span>!</span> Improvement Areas</div>
+                                <ul class="mini-list">
+                                    <li>Glorifies extreme physical self-deprivation (<em>"sacrifice your own health, deprive yourself of sleep and eat once a day"</em>). In modern entrepreneurship, sleep deprivation degrades cognitive performance, decision quality, and ad spend efficiency. Framing this around <strong>peak cognitive fitness, ruthless prioritization, and emotional resilience</strong> is more effective and sustainable.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Section 4: Key Strengths Matrix -->
+            <section id="strengths-matrix" class="section-card">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-icon">🌟</span>
+                        Key Strengths & Differentiators
+                    </h2>
+                    <span class="badge badge-success">Competitive Advantages</span>
+                </div>
+
+                <div class="matrix-grid">
+                    <div class="matrix-box strength">
+                        <h3 class="matrix-title">
+                            <span>🏗️</span> End-to-End Operational Pipeline
+                        </h3>
+                        <p style="font-size: 0.9rem; color: #475569;">
+                            Unlike most beginner business guides that stop at idea generation, this book guides the reader through contracts, contractor vetting, decoy pricing, payment gateway onboarding, sales script closes, and churn prevention.
+                        </p>
+                    </div>
+
+                    <div class="matrix-box strength">
+                        <h3 class="matrix-title">
+                            <span>📜</span> Industrial-Grade SOP Rigor
+                        </h3>
+                        <p style="font-size: 0.9rem; color: #475569;">
+                            Chapters 4 and 5 bring corporate systems engineering down to the solopreneur level. The clear distinction between Policy, Process, System, and SOP is a rare and immensely valuable asset for first-time founders.
+                        </p>
+                    </div>
+
+                    <div class="matrix-box strength">
+                        <h3 class="matrix-title">
+                            <span>🧠</span> Deep Behavioral Psychology
+                        </h3>
+                        <p style="font-size: 0.9rem; color: #475569;">
+                            The analysis of the 3 Primal Desires and 6 Human Needs—especially the real-world deconstruction of Nike’s brand storytelling—gives readers timeless marketing fundamentals that outlast algorithm changes.
+                        </p>
+                    </div>
+
+                    <div class="matrix-box strength">
+                        <h3 class="matrix-title">
+                            <span>🤖</span> Modern AI & Zapier Stacks
+                        </h3>
+                        <p style="font-size: 0.9rem; color: #475569;">
+                            Provides an actionable blueprint for chaining Notion, ChatGPT, Jasper, ElevenLabs, and Canva into an automated multimedia production engine.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: Constructive Critiques & Enhancements -->
+            <section id="critical-critique" class="section-card">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-icon">🔍</span>
+                        Constructive Critiques & Optimization Opportunities
+                    </h2>
+                    <span class="badge badge-warning">Areas for Elevation</span>
+                </div>
+
+                <div class="matrix-grid">
+                    
+                    <div class="matrix-box weakness">
+                        <h3 class="matrix-title" style="color: #b91c1c;">
+                            <span>🏷️</span> Title vs. Core Content Alignment
+                        </h3>
+                        <p style="font-size: 0.88rem; color: #475569; margin-bottom: 0.75rem;">
+                            <strong>Issue:</strong> The book is titled <em>"The Ecommerce Startup That Sells"</em>, but the vast majority of tactical playbooks focus on <strong>B2B Digital Marketing Agencies, Drop-servicing, and Affiliate Blogs</strong>.
+                        </p>
+                        <p style="font-size: 0.88rem; color: #15803d; background: #f0fdf4; padding: 0.6rem; border-radius: 6px;">
+                            <strong>Recommendation:</strong> Retitle to <em>"The Online Startup Playbook: Proven Systems for Ecommerce, Agencies & Digital Businesses"</em> or expand Chapter 6 with deep-dive physical e-commerce modules (COGS, 3PL, custom packaging).
+                        </p>
+                    </div>
+
+                    <div class="matrix-box weakness">
+                        <h3 class="matrix-title" style="color: #b91c1c;">
+                            <span>📈</span> Modern Paid Advertising & Unit Economics
+                        </h3>
+                        <p style="font-size: 0.88rem; color: #475569; margin-bottom: 0.75rem;">
+                            <strong>Issue:</strong> The book relies heavily on organic content and cold outreach. Modern e-commerce brands scale primarily through paid media (Meta Advantage+, TikTok Shop, Google Performance Max) and disciplined unit economics.
+                        </p>
+                        <p style="font-size: 0.88rem; color: #15803d; background: #f0fdf4; padding: 0.6rem; border-radius: 6px;">
+                            <strong>Recommendation:</strong> Add a dedicated framework covering CAC, LTV, Contribution Margin, Blended ROAS (MER), and post-iOS14 first-party tracking.
+                        </p>
+                    </div>
+
+                    <div class="matrix-box weakness">
+                        <h3 class="matrix-title" style="color: #b91c1c;">
+                            <span>✍️</span> Nomenclature & Brand Accuracy
+                        </h3>
+                        <p style="font-size: 0.88rem; color: #475569; margin-bottom: 0.75rem;">
+                            <strong>Issue:</strong> Minor typos in platform names and vocabulary:
+                        </p>
+                        <ul class="mini-list" style="font-size: 0.825rem; margin-bottom: 0.75rem;">
+                            <li><span class="code-tag">Pioneer</span> → Should be <strong>Payoneer</strong></li>
+                            <li><span class="code-tag">Beehive</span> → Should be <strong>Beehiiv</strong></li>
+                            <li><span class="code-tag">Zappier</span> → Should be <strong>Zapier</strong></li>
+                            <li><span class="code-tag">ClickFunnel</span> → Should be <strong>ClickFunnels</strong></li>
+                            <li><span class="code-tag">Copyright</span> → Used instead of <strong>Copywriting</strong> on p.6 & p.70</li>
+                        </ul>
+                        <p style="font-size: 0.88rem; color: #15803d; background: #f0fdf4; padding: 0.6rem; border-radius: 6px;">
+                            <strong>Recommendation:</strong> Run a focused editorial pass to standardize all SaaS tool names and ensure copywriting/intellectual property terminology is clearly separated.
+                        </p>
+                    </div>
+
+                    <div class="matrix-box weakness">
+                        <h3 class="matrix-title" style="color: #b91c1c;">
+                            <span>🔋</span> Reframing the Hustle Mindset
+                        </h3>
+                        <p style="font-size: 0.88rem; color: #475569; margin-bottom: 0.75rem;">
+                            <strong>Issue:</strong> Suggesting founders <em>"sacrifice your own health, deprive yourself of sleep and eat once a day"</em> promotes burnout culture.
+                        </p>
+                        <p style="font-size: 0.88rem; color: #15803d; background: #f0fdf4; padding: 0.6rem; border-radius: 6px;">
+                            <strong>Recommendation:</strong> Reframe around <strong>high-performance athletic endurance</strong>: mental clarity, structured sprints, ruthless elimination of low-value tasks, and emotional stamina.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Section 6: Strategic Roadmap 2.0 -->
+            <section id="roadmap" class="section-card">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-icon">🚀</span>
+                        Strategic Roadmap for Edition 2.0 & Monetization
+                    </h2>
+                    <span class="badge badge-info">Value Maximization</span>
+                </div>
+
+                <div class="roadmap-timeline">
+                    
+                    <div class="roadmap-step">
+                        <div class="roadmap-node"></div>
+                        <div class="roadmap-content">
+                            <h4 class="roadmap-title">Phase 1: Editorial Polish & Visual Asset Integration</h4>
+                            <p class="roadmap-desc">
+                                Fix brand names (Payoneer, Beehiiv, Zapier), correct "copyright/copywriting" terms, format hyperlinks with clickable buttons or QR codes for print/PDF readers, and embed professional vector diagrams for the 3-circle Ikigai model, AIDA funnel, and the SOP logic trees.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-step">
+                        <div class="roadmap-node"></div>
+                        <div class="roadmap-content">
+                            <h4 class="roadmap-title">Phase 2: Add "The Modern E-Commerce Growth Engine" Chapter</h4>
+                            <p class="roadmap-desc">
+                                Include a brand-new dedicated chapter on physical & digital e-commerce scaling: Product-Market Fit signals, Unit Economics (COGS, Shipping, Return Reserves), Meta ASC & TikTok Shop creative testing, Post-Purchase Upsell sequences, and Customer Retention (Klaviyo flows).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-step">
+                        <div class="roadmap-node"></div>
+                        <div class="roadmap-content">
+                            <h4 class="roadmap-title">Phase 3: Turn Book into a Premium "SOP OS & Community" Funnel</h4>
+                            <p class="roadmap-desc">
+                                Package the book's 5 Essential SOPs and contractor agreements into a turnkey <strong>Notion Template / Workspace Kit</strong>. Offer the book as a front-end lead generator ($7-$19) leading into an upsell for the <em>Allen Reiley Entrepreneur Community</em> and private mastermind.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>Comprehensive Review & Architectural Analysis • <em>The Ecommerce Startup That Sells</em> by Allen Reiley (2023)</p>
+        <p style="margin-top: 0.35rem; font-size: 0.78rem;">Generated for Allen Reiley • Prepared for Strategic Evaluation & Review</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
