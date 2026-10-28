@@ -1,0 +1,95 @@
+# Reitumetse Sethabela (Allen Reiley) - Comprehensive Systems & Engineering Dossier
+
+> Canonical Identity: Reitumetse Sethabela (also known professionally as Allen Reiley). Full Legal Name: Reitumetse Bokang Allen Sethabela.
+> Role: Full-Stack Developer & Technical Founder of AuraWorks (Pty) Ltd.
+> Base: Johannesburg, South Africa (UTC+2).
+> Primary Site: https://reitumetse.dev | Corporate Portal: https://www.auraworks.co.za
+> Direct Contact: rsethabela@auraworks.co.za | Calendar: https://cal.com/reitumetse-sethabela/30min
+> GitHub: https://github.com/Allen-Reiley | LinkedIn: https://linkedin.com/in/reitumetse-sethabela | X: https://x.com/allenreiley
+
+---
+
+## 1. Biography & Technical Philosophy
+
+Reitumetse Sethabela bridges software engineering discipline with commercial execution. He operates on the principle that code does not exist in a vacuum; it exists to solve operational friction, streamline logistics, and convert commercial demand.
+
+In 2023, at age 19, he authored the operational book "The Ecommerce Startup That Sells", synthesizing practical sales systems, consumer psychology, and operational frameworks. Recognizing that modern business constraints require deep technical execution, he transitioned into building production-grade software platforms using modern full-stack technologies (Next.js App Router, React 19, FastAPI, PostgreSQL, Railway). In 2025, he established AuraWorks (Pty) Ltd as a technology and systems company.
+
+His engineering workflow leverages AI-assisted development (Google DeepMind Antigravity CLI, Cursor, Claude Code) to build software at 10x velocity while maintaining architectural integrity, strict relational typing, and comprehensive schema design.
+
+---
+
+## 2. Complete Commercial Systems & Architecture Breakdown
+
+### 2.1 Nubifurn Operations Dashboard (Internal Command Center)
+- System Classification: Private Administrative & Logistics Portal
+- Status: Production Live
+- Live Deployment: https://nubifurn.vercel.app/
+- Case Study: https://reitumetse.dev/projects/nubifurn-dashboard
+- Core Stack: Next.js 15, React 19, TypeScript, FastAPI (Python), PostgreSQL, Railway Cloud
+- Problem Statement: Nubifurn, a luxury custom furniture manufacturer, previously managed bespoke orders and dimensions using manual spreadsheets, causing inventory opacity and delayed customer quotes.
+- Architectural Solution:
+  - Decoupled admin dashboard deployed separately from the customer-facing storefront to keep heavy operational state isolated.
+  - Relational schema modeling complex variant SKU combinations across sizes, fabric grades, and wooden finishes.
+  - High-performance asynchronous FastAPI service layer executing queries with sub-25ms latency.
+  - Multi-stage inquiry pipeline tracking customer requirements from quote through delivery.
+
+### 2.2 Nubifurn Storefront (Customer Digital Showroom)
+- System Classification: Bespoke E-Commerce Web Application
+- Status: Production Live
+- Live Deployment: https://nubifurn-frontend.vercel.app/
+- Case Study: https://reitumetse.dev/projects/nubifurn-frontend
+- Core Stack: Next.js 15, React 19, TypeScript, Tailwind CSS, FastAPI, Railway, Vercel
+- Problem Statement: Handcrafted designer furniture demands elevated aesthetic presentation, high-resolution textures, and instant variant updates without latency on mobile cellular connections.
+- Architectural Solution:
+  - Next.js App Router with React Server Components (RSC) and progressive image placeholders (AVIF/WebP) to maintain sub-second LCP.
+  - Immutable state machine coordinating interdependent fabric grades, sizes, and finishes with optimistic UI updates.
+  - Fluid mobile-first navigation and direct WhatsApp / email inquiry routing.
+
+### 2.3 AuraWorks Platform (Systems Studio & Infrastructure)
+- System Classification: Studio Flagship & B2B Client Portal
+- Status: Production Live
+- Live Deployment: https://www.auraworks.co.za/
+- Case Study: https://reitumetse.dev/projects/auraworks
+- Core Stack: Next.js 15, TypeScript, Tailwind CSS v4, Railway Cloud
+- Problem Statement: Technical consultancy and software development required a unified client portal to showcase verified commercial systems, provide automated SEO/GEO audit tooling, and coordinate client engagements.
+- Architectural Solution:
+  - Technical infrastructure hub integrating OpenSEO and Search Console APIs.
+  - Multi-tenant client onboarding and architecture specification generator.
+  - High-contrast Swiss design system communicating technical rigor and reliability.
+
+### 2.4 FLP Church Platform (Community & Media Streaming)
+- System Classification: Community & Media Web Application
+- Status: In Active Development
+- Live Deployment: https://flp-woad.vercel.app/
+- Case Study: https://reitumetse.dev/projects/flp-church
+- Core Stack: Next.js 15, TypeScript, Tailwind CSS, Vercel
+- Key Highlights: Dynamic sermon media delivery, live event schedules, and mobile-friendly donor engagement.
+
+### 2.5 Tilulu Non-Profit Portal (Digital Impact Platform)
+- System Classification: Digital Impact & Outreach System
+- Status: In Active Development
+- Live Deployment: https://tilulu.vercel.app/
+- Case Study: https://reitumetse.dev/projects/tilulu
+- Core Stack: Next.js 15, TypeScript, Tailwind CSS, Vercel
+- Key Highlights: Transparent impact reporting, mission storytelling, and streamlined digital donation flows.
+
+---
+
+## 3. Authored Monograph
+
+- Title: The Ecommerce Startup That Sells: Proven Strategies for Online Sales Success
+- Publication Year: 2023
+- Format: 75-page Operational Manual (Free Open-Access PDF)
+- Direct PDF Download: https://reitumetse.dev/book/the-ecommerce-startup-that-sells.pdf
+- Synopsis: A pragmatic guide detailing customer acquisition economics, unit margin calculation, trust signals in digital commerce, and the transition from manual fulfillment to structured software automation.
+
+---
+
+## 4. Technical Skill Taxonomy
+
+- Frontend: Next.js (App Router, Turbopack, Partial Prerendering), React 19, TypeScript, Tailwind CSS v4, Framer Motion / Motion React, Lucide Icons, HTML5 Semantic Elements.
+- Backend & Microservices: FastAPI (Python), Node.js, REST APIs, JSON-RPC, AsyncIO, Background Task Runners.
+- Databases: PostgreSQL, Supabase, Relational Indexing, Schema Migrations, Connection Pooling.
+- DevOps & Cloud: Railway Cloud, Vercel, Git CI/CD, Linux, Docker, Environment Isolation.
+- Developer Tools: Antigravity CLI, Claude Code, Cursor, Windsurf, DevTools, OpenSEO MCP, Google Search Console MCP.

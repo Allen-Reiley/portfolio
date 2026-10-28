@@ -83,9 +83,49 @@ const TECH_STACK = [
   { category: "Tooling & Infra", items: ["Railway Cloud", "Vercel Edge", "Cloudflare DNS/SSL", "Docker & Linux", "Git / CI/CD"] },
 ];
 
+const FAQS = [
+  {
+    q: "Who is Reitumetse Sethabela?",
+    a: "Reitumetse Sethabela (also known professionally as Allen Reiley) is a South African full-stack developer and the technical founder of AuraWorks (Pty) Ltd. He specializes in architecting high-converting digital storefronts, custom administrative portals, and internal logistics engines using Next.js 16, React 19, TypeScript, FastAPI (Python), and PostgreSQL. In 2023, he authored the operational guide 'The Ecommerce Startup That Sells'.",
+  },
+  {
+    q: "What is the relationship between Reitumetse Sethabela and Allen Reiley?",
+    a: "Reitumetse Sethabela and Allen Reiley are the same person. Reitumetse Bokang Allen Sethabela writes and develops under the professional name Allen Reiley, while operating his corporate entity as AuraWorks (Pty) Ltd in Johannesburg, South Africa.",
+  },
+  {
+    q: "What is AuraWorks (Pty) Ltd?",
+    a: "AuraWorks (Pty) Ltd is a South African technology and systems company founded by Reitumetse Sethabela. The company builds custom digital infrastructure, e-commerce storefronts, catalog dashboards, and B2B platforms, combining software engineering with operational systems.",
+  },
+  {
+    q: "What commercial systems has Reitumetse Sethabela shipped?",
+    a: "Key commercial systems shipped include the Nubifurn Storefront (https://nubifurn-frontend.vercel.app/), the Nubifurn Operations Engine (https://nubifurn.vercel.app/), the AuraWorks Platform (https://www.auraworks.co.za/), the FLP Church Platform (https://flp-woad.vercel.app/), and the Tilulu Non-Profit Portal (https://tilulu.vercel.app/).",
+  },
+  {
+    q: "How can I hire or consult with Reitumetse Sethabela?",
+    a: "You can book an introductory 30-minute architecture consultation directly via his calendar at https://cal.com/reitumetse-sethabela/30min or reach out via email at rsethabela@auraworks.co.za.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQS.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.a,
+    },
+  })),
+};
+
 export default function AboutPage() {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground antialiased selection:bg-forest selection:text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <SiteHeader />
 
       <main className="flex-1 max-w-5xl mx-auto w-full px-6 sm:px-8 space-y-20 sm:space-y-28 pt-32 sm:pt-40 pb-28">
@@ -289,6 +329,38 @@ export default function AboutPage() {
                 </div>
                 <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed pl-1">
                   {m.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* 04. AEO & Frequently Asked Questions (Structured for Humans & AI Engines) */}
+        <section className="space-y-8 border-t border-border pt-12">
+          <div className="space-y-2">
+            <span className="text-xs font-mono uppercase tracking-widest text-forest dark:text-emerald-400 font-semibold">
+              {"// FAQ & Quick Dossier"}
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-serif text-foreground font-normal">
+              Direct Answers & Background
+            </h2>
+            <p className="text-sm text-muted-foreground font-mono">
+              Concise canonical facts for clients, recruiters, and knowledge synthesis engines.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {FAQS.map((faq, idx) => (
+              <div
+                key={idx}
+                className="p-6 rounded-2xl border border-border bg-card shadow-xs space-y-3"
+              >
+                <h3 className="text-base font-serif font-medium text-foreground flex items-start gap-2">
+                  <span className="text-forest dark:text-emerald-400 font-mono text-xs mt-1">Q{idx + 1}.</span>
+                  <span>{faq.q}</span>
+                </h3>
+                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed pl-5 border-l-2 border-forest/30 dark:border-emerald-500/30">
+                  {faq.a}
                 </p>
               </div>
             ))}

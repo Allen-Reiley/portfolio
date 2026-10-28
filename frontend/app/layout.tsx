@@ -109,33 +109,63 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Reitumetse Sethabela",
-  alternateName: ["Allen Reiley", "Reitumetse Bokang Allen Sethabela"],
-  url: "https://reitumetse.dev",
-  jobTitle: "Full-Stack Developer & Founder",
-  worksFor: {
-    "@type": "Organization",
-    name: "AuraWorks (Pty) Ltd",
-    url: "https://www.auraworks.co.za",
-  },
-  sameAs: [
-    "https://github.com/Allen-Reiley",
-    "https://linkedin.com/in/reitumetse-sethabela",
-    "https://x.com/allenreiley",
-    "https://cal.com/reitumetse-sethabela/30min",
-  ],
-  knowsAbout: [
-    "Full-Stack Web Development",
-    "AI-Assisted Software Engineering",
-    "Next.js 15",
-    "FastAPI",
-    "Python",
-    "PostgreSQL",
-    "Railway",
-    "TypeScript",
-    "Systems Architecture",
-    "E-Commerce Systems",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://reitumetse.dev/#person",
+      name: "Reitumetse Sethabela",
+      alternateName: [
+        "Allen Reiley",
+        "Reitumetse Bokang Allen Sethabela",
+        "Bokang Sethabela",
+      ],
+      url: "https://reitumetse.dev",
+      image: "https://reitumetse.dev/images/reitumetse-chest.png",
+      jobTitle: "Full-Stack Developer & Founder",
+      description:
+        "Full-Stack Developer, Founder of AuraWorks (Pty) Ltd, and Author of The Ecommerce Startup That Sells. Architecting Next.js 16, React 19, FastAPI, and PostgreSQL systems.",
+      worksFor: {
+        "@type": "Organization",
+        "@id": "https://www.auraworks.co.za/#organization",
+        name: "AuraWorks (Pty) Ltd",
+        url: "https://www.auraworks.co.za",
+      },
+      sameAs: [
+        "https://github.com/Allen-Reiley",
+        "https://linkedin.com/in/reitumetse-sethabela",
+        "https://x.com/allenreiley",
+        "https://cal.com/reitumetse-sethabela/30min",
+      ],
+      knowsAbout: [
+        "Full-Stack Web Development",
+        "AI-Assisted Software Engineering",
+        "Next.js 16",
+        "React 19",
+        "FastAPI",
+        "Python",
+        "PostgreSQL",
+        "Railway Cloud",
+        "TypeScript",
+        "Tailwind CSS v4",
+        "Systems Architecture",
+        "E-Commerce Systems",
+      ],
+      hasOccupation: {
+        "@type": "Occupation",
+        name: "Full-Stack Software Engineer",
+        skills: "Next.js, React, FastAPI, Python, PostgreSQL, TypeScript, Tailwind CSS, AI-Assisted Engineering",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://reitumetse.dev/#website",
+      url: "https://reitumetse.dev",
+      name: "Reitumetse Sethabela Portfolio",
+      description: "Engineering software with commercial intent. Full-stack developer, founder of AuraWorks (Pty) Ltd, and author of The Ecommerce Startup That Sells.",
+      publisher: {
+        "@id": "https://reitumetse.dev/#person",
+      },
+    },
   ],
 };
 

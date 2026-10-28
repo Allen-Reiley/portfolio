@@ -98,8 +98,34 @@ export default async function BlogPostPage({ params }: Props) {
     );
   });
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    headline: post.title,
+    description: post.summary,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      "@type": "Person",
+      name: post.author,
+      alternateName: ["Reitumetse Sethabela", "Allen Reiley"],
+      url: "https://reitumetse.dev",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "AuraWorks (Pty) Ltd",
+      url: "https://www.auraworks.co.za",
+    },
+    url: `https://reitumetse.dev/blog/${post.slug}`,
+    keywords: post.tags.join(", "),
+  };
+
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground antialiased selection:bg-forest selection:text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <SiteHeader />
 
       <main className="flex-1 max-w-4xl mx-auto w-full px-6 sm:px-8 space-y-12 sm:space-y-16 pt-32 sm:pt-40 pb-28">

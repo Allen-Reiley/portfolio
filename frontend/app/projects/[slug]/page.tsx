@@ -40,8 +40,36 @@ export default async function ProjectCaseStudyPage({ params }: Props) {
 
   const isLive = project.status === "Production Live";
 
+  const projectJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: project.title,
+    headline: project.tagline,
+    description: project.summary,
+    applicationCategory: project.category === "E-Commerce" ? "BusinessApplication" : "WebApplication",
+    operatingSystem: "Cloud, Web",
+    url: `https://reitumetse.dev/projects/${project.slug}`,
+    sameAs: project.liveUrl ? [project.liveUrl] : [],
+    author: {
+      "@type": "Person",
+      name: "Reitumetse Sethabela",
+      alternateName: "Allen Reiley",
+      url: "https://reitumetse.dev",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "AuraWorks (Pty) Ltd",
+      url: "https://www.auraworks.co.za",
+    },
+    softwareRequirements: project.stack.join(", "),
+  };
+
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground antialiased selection:bg-forest selection:text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(projectJsonLd) }}
+      />
       <SiteHeader />
 
       <main className="flex-1 max-w-5xl mx-auto w-full px-6 sm:px-8 space-y-16 sm:space-y-24 pt-32 sm:pt-40 pb-24">

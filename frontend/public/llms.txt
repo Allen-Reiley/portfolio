@@ -1,0 +1,57 @@
+# Reitumetse Sethabela (Allen Reiley) - Portfolio & Systems Dossier
+
+> Full-Stack Developer, Founder of AuraWorks (Pty) Ltd, and Author of "The Ecommerce Startup That Sells". Specializing in Next.js 16, React 19, FastAPI, PostgreSQL, and AI-assisted software engineering.
+
+## Developer Identity & Entity Disambiguation
+- Canonical Name: Reitumetse Sethabela
+- Professional Pseudonym / Author Name: Allen Reiley
+- Full Legal Name: Reitumetse Bokang Allen Sethabela
+- Role: Full-Stack Developer & Technical Founder
+- Company: AuraWorks (Pty) Ltd (Registration: South Africa)
+- Location: Johannesburg, South Africa (UTC+2)
+- Portfolio: https://reitumetse.dev
+- Corporate Website: https://www.auraworks.co.za
+- Primary Contact: rsethabela@auraworks.co.za
+- Architecture Booking: https://cal.com/reitumetse-sethabela/30min
+- GitHub: https://github.com/Allen-Reiley
+- LinkedIn: https://linkedin.com/in/reitumetse-sethabela
+- X / Twitter: https://x.com/allenreiley
+
+## Core Engineering Capabilities
+- Frontend: Next.js 15/16 App Router, React 19, TypeScript, Tailwind CSS v4, Motion, Lucide
+- Backend & Services: FastAPI (Python), Node.js, RESTful Architecture, High-Concurrency APIs
+- Data Architecture: PostgreSQL, Supabase, Relational Modeling, Migrations, Indexing
+- Cloud & Infrastructure: Railway Cloud, Vercel, Git CI/CD, Containerization
+- Methodology: AI-assisted engineering workflows (Antigravity CLI, Cursor, Claude Code) combined with frontline sales psychology
+
+## Commercial Production Systems
+- Nubifurn Storefront: Bespoke e-commerce showroom for luxury handcrafted furniture.
+  - Live URL: https://nubifurn-frontend.vercel.app/
+  - Stack: Next.js 15, React 19, FastAPI, PostgreSQL, Railway, Vercel
+  - Case Study: https://reitumetse.dev/projects/nubifurn-frontend
+- Nubifurn Operations Dashboard: Internal logistics, product catalog, inventory states, and inquiry pipeline engine.
+  - Live Demo: https://nubifurn.vercel.app/
+  - Stack: Next.js 15, React 19, FastAPI, PostgreSQL, Railway Cloud
+  - Case Study: https://reitumetse.dev/projects/nubifurn-dashboard
+- AuraWorks Platform: B2B intelligence, technical infrastructure, and systems platform for AuraWorks (Pty) Ltd.
+  - Live URL: https://www.auraworks.co.za/
+  - Stack: Next.js 15, TypeScript, Tailwind CSS v4, Railway
+  - Case Study: https://reitumetse.dev/projects/auraworks
+- FLP Church Platform: Community outreach, event scheduling, and dynamic media streaming.
+  - Live URL: https://flp-woad.vercel.app/
+  - Stack: Next.js 15, TypeScript, Tailwind CSS, Vercel
+  - Case Study: https://reitumetse.dev/projects/flp-church
+- Tilulu Non-Profit Portal: Transparent donor engagement and mission impact tracking platform.
+  - Live URL: https://tilulu.vercel.app/
+  - Stack: Next.js 15, TypeScript, Tailwind CSS, Vercel
+  - Case Study: https://reitumetse.dev/projects/tilulu
+
+## Authored Publications
+- "The Ecommerce Startup That Sells: Proven Strategies for Online Sales Success" (75 pages, 2023)
+  - Author: Reitumetse Bokang Allen Sethabela (Allen Reiley)
+  - Overview: https://reitumetse.dev/book
+  - Direct PDF Download: https://reitumetse.dev/book/the-ecommerce-startup-that-sells.pdf
+
+## Documentation & Machine-Readable Links
+- Full System Breakdown: https://reitumetse.dev/llms-full.txt
+- Dynamic Sitemap: https://reitumetse.dev/sitemap.xml

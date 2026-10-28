@@ -73,9 +73,44 @@ const CORE_FRAMEWORKS = [
   },
 ];
 
+const bookJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Book",
+  name: "The Ecommerce Startup That Sells: Proven Strategies for Online Sales Success",
+  alternateName: "The Ecommerce Startup That Sells",
+  author: {
+    "@type": "Person",
+    name: "Reitumetse Bokang Allen Sethabela",
+    alternateName: "Allen Reiley",
+    url: "https://reitumetse.dev",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "AuraWorks (Pty) Ltd",
+    url: "https://www.auraworks.co.za",
+  },
+  datePublished: "2023",
+  inLanguage: "en",
+  numberOfPages: 75,
+  isAccessibleForFree: true,
+  bookFormat: "https://schema.org/EBook",
+  url: "https://reitumetse.dev/book",
+  description:
+    "A 75-page systems monograph detailing Standard Operating Procedures, legal contract templates, consumer psychology, and operational scaling for modern digital ventures.",
+  encoding: {
+    "@type": "MediaObject",
+    encodingFormat: "application/pdf",
+    contentUrl: "https://reitumetse.dev/book/the-ecommerce-startup-that-sells.pdf",
+  },
+};
+
 export default function BookPage() {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground antialiased selection:bg-forest selection:text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(bookJsonLd) }}
+      />
       <SiteHeader />
 
       <main className="flex-1 max-w-5xl mx-auto w-full px-6 sm:px-8 space-y-20 sm:space-y-28 pt-32 sm:pt-40 pb-28">
