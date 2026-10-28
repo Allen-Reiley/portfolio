@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design 05: Modern Bento Craft — Reitumetse Sethabela</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            canvas: '#F6F6F2',
+            card: '#FFFFFF',
+            ink: '#141619',
+            muted: '#686E78',
+            accent: '#0A84FF',
+            emeraldPill: '#30D158',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #F6F6F2;
+      color: #141619;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .video-mask {
+      aspect-ratio: 1213/667;
+      mask-image: url("data:image/svg+xml,%3Csvg width='221' height='122' viewBox='0 0 221 122' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fillRule='evenodd' clipRule='evenodd' d='M183 4C183 1.79086 184.791 0 187 0H217C219.209 0 221 1.79086 221 4V14V28V99C221 101.209 219.209 103 217 103H182C179.791 103 178 104.791 178 107V118C178 120.209 176.209 122 174 122H28C25.7909 122 24 120.209 24 118V103V94V46C24 43.7909 22.2091 42 20 42H4C1.79086 42 0 40.2091 0 38V18C0 15.7909 1.79086 14 4 14H24H43H179C181.209 14 183 12.2091 183 10V4Z' fill='%23D9D9D9'/%3E%3C/svg%3E%0A");
+      -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='221' height='122' viewBox='0 0 221 122' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fillRule='evenodd' clipRule='evenodd' d='M183 4C183 1.79086 184.791 0 187 0H217C219.209 0 221 1.79086 221 4V14V28V99C221 101.209 219.209 103 217 103H182C179.791 103 178 104.791 178 107V118C178 120.209 176.209 122 174 122H28C25.7909 122 24 120.209 24 118V103V94V46C24 43.7909 22.2091 42 20 42H4C1.79086 42 0 40.2091 0 38V18C0 15.7909 1.79086 14 4 14H24H43H179C181.209 14 183 12.2091 183 10V4Z' fill='%23D9D9D9'/%3E%3C/svg%3E%0A");
+      mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat;
+      mask-size: contain;
+      -webkit-mask-size: contain;
+    }
+  </style>
+</head>
+<body class="selection:bg-accent selection:text-white p-4 sm:p-8">
+
+  <!-- Bento Nav Pill -->
+  <header class="fixed top-6 inset-x-0 mx-auto w-fit z-50">
+    <div class="rounded-full bg-white/90 backdrop-blur-2xl border border-black/5 px-6 py-2.5 flex items-center gap-6 shadow-[0_10px_30px_rgba(0,0,0,0.06)] text-xs font-medium">
+      <span class="font-bold tracking-tight text-ink">Reitumetse Sethabela</span>
+      <span class="text-slate-300">•</span>
+      <nav class="flex items-center gap-4 text-muted">
+        <a href="#bento-work" class="hover:text-ink transition-colors">Work</a>
+        <a href="#bento-stack" class="hover:text-ink transition-colors">Stack</a>
+        <a href="#bento-book" class="hover:text-ink transition-colors">Book</a>
+      </nav>
+      <a href="https://cal.com/reitumetse-sethabela/30min" target="_blank" class="px-4 py-1.5 rounded-full bg-ink text-white hover:bg-accent transition-colors font-semibold">
+        Book Call ↗
+      </a>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto pt-28 pb-32 space-y-12">
+
+    <!-- HERO BENTO GRID -->
+    <section class="grid grid-cols-1 md:grid-cols-12 gap-6">
+
+      <!-- Main Identity Card (8 cols) -->
+      <div class="md:col-span-7 bg-card rounded-3xl p-8 sm:p-12 shadow-sm border border-black/5 flex flex-col justify-between space-y-8">
+        <div class="space-y-4">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emeraldPill/10 text-emerald-700 text-xs font-semibold">
+            <span class="size-2 rounded-full bg-emeraldPill animate-pulse"></span>
+            Available for Select Flagship Builds
+          </div>
+          <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-ink leading-[1.08]">
+            Full-Stack Developer & Systems Builder.
+          </h1>
+          <p class="text-lg text-muted font-normal leading-relaxed max-w-xl">
+            I engineer web applications, headless e-commerce storefronts, and internal operations tools. Based in South Africa, building for the web worldwide.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-4 pt-4">
+          <a href="https://cal.com/reitumetse-sethabela/30min" target="_blank" class="px-7 py-3.5 rounded-2xl bg-ink text-white font-semibold text-sm hover:bg-accent transition-all shadow-md">
+            Schedule 30-min Call ↗
+          </a>
+          <a href="https://github.com/Allen-Reiley" target="_blank" class="px-6 py-3.5 rounded-2xl bg-canvas border border-black/5 text-ink font-medium text-sm hover:border-black/20 transition-all">
+            GitHub ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Portrait Bento Card (5 cols) -->
+      <div class="md:col-span-5 bg-card rounded-3xl p-6 shadow-sm border border-black/5 flex items-end justify-center overflow-hidden min-h-[460px]">
+        <img src="images/reitumetse-chest.png" onerror="this.onerror=null;this.src='../frontend/public/images/reitumetse-chest.png';" alt="Reitumetse Sethabela" class="h-full max-h-[440px] object-contain object-bottom drop-shadow-xl">
+      </div>
+    </section>
+
+    <!-- VIDEO BENTO MODULE DIRECTLY UNDER HERO -->
+    <section class="bg-card rounded-3xl p-8 sm:p-12 shadow-sm border border-black/5 flex flex-col items-center justify-center">
+      <div class="relative w-full max-w-3xl aspect-[221/122]">
+        <div class="w-full h-full video-mask bg-slate-950 overflow-hidden shadow-2xl">
+          <video autoplay muted loop playsinline class="w-full h-full object-cover">
+            <source src="https://videos.pexels.com/video-files/7710243/7710243-uhd_2560_1440_30fps.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHIPPED WORK BENTO TILES WITH LIVE IFRAMES -->
+    <section id="bento-work" class="space-y-8">
+      <div class="flex items-baseline justify-between px-2">
+        <h2 class="text-3xl font-extrabold tracking-tight text-ink">Shipped Production Systems</h2>
+        <span class="text-xs font-mono text-muted uppercase">5 Live Interactive Runtimes</span>
+      </div>
+
+      <!-- Nubifurn Storefront -->
+      <div class="bg-card rounded-3xl p-8 sm:p-10 shadow-sm border border-black/5 space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4">
+          <div>
+            <span class="text-xs font-mono font-bold text-accent uppercase">01 · E-Commerce Showroom</span>
+            <h3 class="text-3xl font-bold text-ink mt-1">Nubifurn Storefront</h3>
+            <p class="text-sm text-muted mt-1">Next.js 15, React 19, FastAPI, Railway, Vercel</p>
+          </div>
+          <a href="https://nubifurn-frontend.vercel.app/" target="_blank" class="px-5 py-2.5 rounded-full bg-canvas text-ink font-semibold text-xs border border-black/5 hover:bg-ink hover:text-white transition-all">
+            Launch Storefront ↗
+          </a>
+        </div>
+        <div class="rounded-2xl border border-black/10 overflow-hidden shadow-lg">
+          <iframe src="https://nubifurn-frontend.vercel.app/" class="w-full h-[520px] border-0" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <!-- Nubifurn Dashboard -->
+      <div class="bg-card rounded-3xl p-8 sm:p-10 shadow-sm border border-black/5 space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4">
+          <div>
+            <span class="text-xs font-mono font-bold text-accent uppercase">02 · Internal Operations</span>
+            <h3 class="text-3xl font-bold text-ink mt-1">Nubifurn Inventory & Orders Portal</h3>
+            <p class="text-sm text-muted mt-1">FastAPI, Python, PostgreSQL, Railway</p>
+          </div>
+          <a href="https://nubifurn.vercel.app/" target="_blank" class="px-5 py-2.5 rounded-full bg-canvas text-ink font-semibold text-xs border border-black/5 hover:bg-ink hover:text-white transition-all">
+            Launch Operations Portal ↗
+          </a>
+        </div>
+        <div class="rounded-2xl border border-black/10 overflow-hidden shadow-lg">
+          <iframe src="https://nubifurn.vercel.app/" class="w-full h-[520px] border-0" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <!-- AuraWorks Platform -->
+      <div class="bg-card rounded-3xl p-8 sm:p-10 shadow-sm border border-black/5 space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4">
+          <div>
+            <span class="text-xs font-mono font-bold text-accent uppercase">03 · Studio Flagship</span>
+            <h3 class="text-3xl font-bold text-ink mt-1">AuraWorks (Pty) Ltd Platform</h3>
+            <p class="text-sm text-muted mt-1">Next.js, TypeScript, Tailwind CSS, Railway</p>
+          </div>
+          <a href="https://www.auraworks.co.za/" target="_blank" class="px-5 py-2.5 rounded-full bg-canvas text-ink font-semibold text-xs border border-black/5 hover:bg-ink hover:text-white transition-all">
+            Visit AuraWorks ↗
+          </a>
+        </div>
+        <div class="rounded-2xl border border-black/10 overflow-hidden shadow-lg">
+          <iframe src="https://www.auraworks.co.za/" class="w-full h-[520px] border-0" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK BENTO TILES -->
+    <section id="bento-stack" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-card rounded-3xl p-6 shadow-sm border border-black/5 space-y-4">
+        <span class="text-xs font-mono font-bold text-accent">LANGUAGES</span>
+        <ul class="text-xs font-mono space-y-2 text-muted">
+          <li>• TypeScript</li>
+          <li>• Python</li>
+          <li>• SQL</li>
+          <li>• JavaScript</li>
+          <li>• HTML5 / CSS3</li>
+        </ul>
+      </div>
+      <div class="bg-card rounded-3xl p-6 shadow-sm border border-black/5 space-y-4">
+        <span class="text-xs font-mono font-bold text-accent">FRONTEND</span>
+        <ul class="text-xs font-mono space-y-2 text-muted">
+          <li>• Next.js 15</li>
+          <li>• React 19</li>
+          <li>• Tailwind CSS v4</li>
+          <li>• Motion</li>
+        </ul>
+      </div>
+      <div class="bg-card rounded-3xl p-6 shadow-sm border border-black/5 space-y-4">
+        <span class="text-xs font-mono font-bold text-accent">BACKEND</span>
+        <ul class="text-xs font-mono space-y-2 text-muted">
+          <li>• FastAPI</li>
+          <li>• Python Core</li>
+          <li>• PostgreSQL</li>
+          <li>• REST / Webhooks</li>
+        </ul>
+      </div>
+      <div class="bg-card rounded-3xl p-6 shadow-sm border border-black/5 space-y-4">
+        <span class="text-xs font-mono font-bold text-accent">INFRASTRUCTURE</span>
+        <ul class="text-xs font-mono space-y-2 text-muted">
+          <li>• Railway</li>
+          <li>• Vercel</li>
+          <li>• Cloudflare</li>
+          <li>• Linux / Git</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- BOOK BENTO CAPSULE -->
+    <section id="bento-book" class="bg-card rounded-3xl p-8 sm:p-12 shadow-sm border border-black/5 flex flex-col sm:flex-row items-center justify-between gap-8">
+      <div class="space-y-2">
+        <span class="text-xs font-mono font-bold text-accent uppercase">Published Monograph · 75 Pages</span>
+        <h3 class="text-3xl font-extrabold tracking-tight text-ink">The Ecommerce Startup That Sells</h3>
+        <p class="text-sm text-muted max-w-xl">
+          Written at age 19 by Allen Reiley. Standard operating procedures, client contracts, and customer acquisition psychology. Free download.
+        </p>
+      </div>
+      <a href="../frontend/public/book/the-ecommerce-startup-that-sells.pdf" download class="px-8 py-4 rounded-2xl bg-ink text-white font-semibold text-xs hover:bg-accent transition-all shrink-0 shadow-lg">
+        Download PDF (4.1 MB) ↓
+      </a>
+    </section>
+
+  </main>
+</body>
+</html>

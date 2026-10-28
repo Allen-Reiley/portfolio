@@ -1,26 +1,122 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --font-mono: var(--font-mono);
+  --font-heading: var(--font-serif);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-forest: var(--forest);
+  --color-forest-dark: var(--forest-dark);
+  --color-brand-teal: var(--brand-teal);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* 
+  Swiss Editorial × Technical Bento Theme
+  - Light mode: Warm non-glare architectural paper (#F5F4EE), deep espresso ink (#151614), British racing forest green (#1E4A38), and developer brand teal (#00A389).
+  - Dark mode: Luxurious deep obsidian charcoal (#0C0E14), crisp typography (#ECEEF2), glowing emerald green (#34D399), and radiant teal (#00DDB3).
+*/
+:root {
+  --background: #F5F4EE;
+  --foreground: #151614;
+  --card: #FFFFFF;
+  --card-foreground: #151614;
+  --popover: #FFFFFF;
+  --popover-foreground: #151614;
+  --primary: #1E4A38; /* British racing forest green */
+  --primary-foreground: #FFFFFF;
+  --secondary: #EBEAE2;
+  --secondary-foreground: #151614;
+  --muted: #E6E4DC;
+  --muted-foreground: #666860;
+  --accent: #E2ECE6;
+  --accent-foreground: #1E4A38;
+  --destructive: #DC2626;
+  --border: rgba(21, 22, 20, 0.09);
+  --input: rgba(21, 22, 20, 0.09);
+  --ring: #1E4A38;
+  --radius: 0.85rem;
+
+  --forest: #1E4A38;
+  --forest-dark: #143326;
+  --brand-teal: #00A389;
+
+  --hall-grid-color: rgba(21, 22, 20, 0.035);
+  --hall-dot-color: rgba(21, 22, 20, 0.06);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.dark {
+  --background: #0C0E14;
+  --foreground: #ECEEF2;
+  --card: #131722;
+  --card-foreground: #ECEEF2;
+  --popover: #131722;
+  --popover-foreground: #ECEEF2;
+  --primary: #34D399; /* Radiant emerald green */
+  --primary-foreground: #0C0E14;
+  --secondary: rgba(255, 255, 255, 0.06);
+  --secondary-foreground: #ECEEF2;
+  --muted: rgba(255, 255, 255, 0.05);
+  --muted-foreground: #9198A6;
+  --accent: rgba(52, 211, 153, 0.12);
+  --accent-foreground: #34D399;
+  --destructive: #EF4444;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.08);
+  --ring: #34D399;
+
+  --forest: #34D399;
+  --forest-dark: #10B981;
+  --brand-teal: #00DDB3;
+
+  --hall-grid-color: rgba(255, 255, 255, 0.035);
+  --hall-dot-color: rgba(255, 255, 255, 0.065);
+}
+
+/* Video mask SVG utility */
+.video-mask {
+  aspect-ratio: 1213/667;
+  mask-image: url("data:image/svg+xml,%3Csvg width='221' height='122' viewBox='0 0 221 122' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fillRule='evenodd' clipRule='evenodd' d='M183 4C183 1.79086 184.791 0 187 0H217C219.209 0 221 1.79086 221 4V14V28V99C221 101.209 219.209 103 217 103H182C179.791 103 178 104.791 178 107V118C178 120.209 176.209 122 174 122H28C25.7909 122 24 120.209 24 118V103V94V46C24 43.7909 22.2091 42 20 42H4C1.79086 42 0 40.2091 0 38V18C0 15.7909 1.79086 14 4 14H24H43H179C181.209 14 183 12.2091 183 10V4Z' fill='%23D9D9D9'/%3E%3C/svg%3E%0A");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='221' height='122' viewBox='0 0 221 122' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fillRule='evenodd' clipRule='evenodd' d='M183 4C183 1.79086 184.791 0 187 0H217C219.209 0 221 1.79086 221 4V14V28V99C221 101.209 219.209 103 217 103H182C179.791 103 178 104.791 178 107V118C178 120.209 176.209 122 174 122H28C25.7909 122 24 120.209 24 118V103V94V46C24 43.7909 22.2091 42 20 42H4C1.79086 42 0 40.2091 0 38V18C0 15.7909 1.79086 14 4 14H24H43H179C181.209 14 183 12.2091 183 10V4Z' fill='%23D9D9D9'/%3E%3C/svg%3E%0A");
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+}
+
+/* Atmospheric Micro-Grid & Constellation Backgrounds */
+.hall-grid {
+  background-image: 
+    linear-gradient(to right, var(--hall-grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--hall-grid-color) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.hall-dots {
+  background-image: radial-gradient(var(--hall-dot-color) 1px, transparent 1px);
+  background-size: 24px 24px;
 }

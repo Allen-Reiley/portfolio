@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design 07: Swiss Editorial × Technical Bento — Reitumetse Sethabela</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            paper: '#F5F4EE',
+            card: '#FFFFFF',
+            ink: '#151614',
+            subtle: '#5A5B55',
+            muted: '#767870',
+            line: 'rgba(21, 22, 20, 0.09)',
+            forest: '#1E4A38',
+            forestDark: '#143326',
+            brandTeal: '#00A389',
+            brandTealSubtle: 'rgba(0, 163, 137, 0.1)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #F5F4EE;
+      color: #151614;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    ::selection {
+      background-color: #1E4A38;
+      color: #FFFFFF;
+    }
+    .video-mask {
+      aspect-ratio: 1213/667;
+      mask-image: url("data:image/svg+xml,%3Csvg width='221' height='122' viewBox='0 0 221 122' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fillRule='evenodd' clipRule='evenodd' d='M183 4C183 1.79086 184.791 0 187 0H217C219.209 0 221 1.79086 221 4V14V28V99C221 101.209 219.209 103 217 103H182C179.791 103 178 104.791 178 107V118C178 120.209 176.209 122 174 122H28C25.7909 122 24 120.209 24 118V103V94V46C24 43.7909 22.2091 42 20 42H4C1.79086 42 0 40.2091 0 38V18C0 15.7909 1.79086 14 4 14H24H43H179C181.209 14 183 12.2091 183 10V4Z' fill='%23D9D9D9'/%3E%3C/svg%3E%0A");
+      -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='221' height='122' viewBox='0 0 221 122' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fillRule='evenodd' clipRule='evenodd' d='M183 4C183 1.79086 184.791 0 187 0H217C219.209 0 221 1.79086 221 4V14V28V99C221 101.209 219.209 103 217 103H182C179.791 103 178 104.791 178 107V118C178 120.209 176.209 122 174 122H28C25.7909 122 24 120.209 24 118V103V94V46C24 43.7909 22.2091 42 20 42H4C1.79086 42 0 40.2091 0 38V18C0 15.7909 1.79086 14 4 14H24H43H179C181.209 14 183 12.2091 183 10V4Z' fill='%23D9D9D9'/%3E%3C/svg%3E%0A");
+      mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat;
+      mask-size: contain;
+      -webkit-mask-size: contain;
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- TOP RIBBON: Swiss Typography + Bento Live Status Capsule -->
+  <header class="border-b border-line bg-paper/90 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 py-4 flex flex-wrap items-center justify-between gap-4">
+      
+      <!-- Brand & Origin -->
+      <div class="flex items-center gap-3">
+        <a href="#" class="flex items-center gap-2.5 group">
+          <div class="w-8 h-8 rounded-lg bg-forest text-white flex items-center justify-center font-bold text-xs tracking-wider shadow-sm group-hover:bg-brandTeal transition-colors">
+            RS
+          </div>
+          <div>
+            <span class="font-serif italic text-xl font-bold tracking-tight text-ink block leading-none">Reitumetse Sethabela</span>
+            <span class="font-mono text-[10px] uppercase tracking-wider text-muted block mt-0.5">Johannesburg · Founder, AuraWorks</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center gap-6 text-xs font-semibold uppercase tracking-wider text-subtle">
+        <a href="#systems" class="hover:text-ink hover:text-forest transition-colors">Systems</a>
+        <a href="#stack" class="hover:text-ink hover:text-forest transition-colors">Technical Stack</a>
+        <a href="#timeline" class="hover:text-ink hover:text-forest transition-colors">Background</a>
+        <a href="#monograph" class="hover:text-ink hover:text-forest transition-colors">Publication</a>
+        <a href="#contact" class="hover:text-ink hover:text-forest transition-colors">Inquire</a>
+      </nav>
+
+      <!-- Status Pill & Dual Action -->
+      <div class="flex items-center gap-3">
+        <div class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-line text-[11px] font-mono text-ink shadow-sm">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-600"></span>
+          </span>
+          <span class="font-medium text-forest font-sans">Available for Projects & Roles</span>
+        </div>
+
+        <a href="https://cal.com/reitumetse-sethabela/30min" target="_blank" class="px-4 py-2 rounded-xl bg-forest hover:bg-forestDark text-white text-xs font-semibold tracking-wide transition-all shadow-sm flex items-center gap-1.5">
+          <span>Schedule 30m</span>
+          <span class="text-xs">↗</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN WRAPPER -->
+  <main class="max-w-7xl mx-auto px-6 sm:px-8 py-12 sm:py-16 space-y-20 sm:space-y-28">
+
+    <!-- HERO SECTION: Swiss Editorial Typography × Right-Aligned Cutout Portrait -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center pt-4">
+      
+      <!-- Copy Column -->
+      <div class="lg:col-span-8 space-y-8">
+        
+        <!-- Eyebrow Badge -->
+        <div class="inline-flex items-center gap-2.5 px-3 py-1 rounded-md bg-white border border-line text-[11px] font-mono uppercase tracking-widest text-forest">
+          <span class="w-1.5 h-1.5 rounded-full bg-brandTeal"></span>
+          <span>Full-Stack Developer · Technical Founder</span>
+        </div>
+
+        <!-- Editorial Headline -->
+        <h1 class="text-5xl sm:text-7xl lg:text-[5.5rem] font-serif leading-[1.04] tracking-tight text-ink">
+          Engineering software with <span class="italic text-forest">commercial intent.</span>
+        </h1>
+
+        <!-- Subheading Paragraph -->
+        <p class="text-lg sm:text-xl text-subtle leading-relaxed max-w-2xl font-normal">
+          I architect full-stack web applications, internal logistics engines, and resilient digital products. Combining technical rigor with deep business acumen to build tools that solve actual operational problems.
+        </p>
+
+        <!-- Dual Call-to-Action Paths (Recruiters & Clients) -->
+        <div class="pt-2 flex flex-wrap items-center gap-4">
+          <a href="#systems" class="px-6 py-3.5 rounded-xl bg-forest hover:bg-forestDark text-white font-medium text-sm transition-all shadow-md flex items-center gap-2">
+            <span>Explore Shipped Systems</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+          </a>
+          
+          <a href="https://cal.com/reitumetse-sethabela/30min" target="_blank" class="px-6 py-3.5 rounded-xl bg-white hover:bg-stone-50 text-ink border border-line font-medium text-sm transition-all shadow-sm flex items-center gap-2">
+            <span>Book Architecture Session</span>
+            <span class="text-xs text-subtle">↗</span>
+          </a>
+        </div>
+
+        <!-- Footnote Telemetry -->
+        <div class="pt-4 border-t border-line flex flex-wrap items-center gap-6 font-mono text-xs text-muted">
+          <div><span class="text-forest font-semibold">Location:</span> Johannesburg (UTC+2)</div>
+          <div><span class="text-forest font-semibold">Core:</span> Next.js 15 · FastAPI · PostgreSQL · Railway</div>
+          <div><span class="text-forest font-semibold">Role:</span> Full-Time & Select Contracts</div>
+        </div>
+
+      </div>
+
+      <!-- Hero Portrait: Natural Chest Bust Cutout with Ambient Halo -->
+      <div class="lg:col-span-4 flex justify-center lg:justify-end">
+        <div class="relative w-full max-w-[340px] aspect-[4/5] bg-gradient-to-b from-white/80 via-white/50 to-transparent rounded-3xl border border-line p-4 flex items-end justify-center overflow-hidden shadow-xl">
+          <!-- Subtle brand glow behind portrait -->
+          <div class="absolute -top-12 -right-12 w-48 h-48 bg-brandTeal/15 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="absolute bottom-4 left-4 w-40 h-40 bg-forest/10 rounded-full blur-2xl pointer-events-none"></div>
+
+          <!-- Cutout Image with direct & fallback paths -->
+          <img 
+            src="images/reitumetse-chest.png" 
+            onerror="this.onerror=null;this.src='../frontend/public/images/reitumetse-chest.png';" 
+            alt="Reitumetse Sethabela" 
+            class="h-[92%] w-auto object-contain object-bottom relative z-10 drop-shadow-xl"
+          >
+
+          <!-- Floating Nameplate Pill -->
+          <div class="absolute bottom-3 inset-x-3 bg-white/95 backdrop-blur-md border border-line rounded-xl px-3.5 py-2 z-20 flex items-center justify-between text-[11px] shadow-sm">
+            <div>
+              <p class="font-bold text-ink">Reitumetse Sethabela</p>
+              <p class="text-muted font-mono text-[9px] uppercase">Systems Architect</p>
+            </div>
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- CUSTOM MASKED VIDEO COMPONENT (Directly under hero, 0 overlay text) -->
+    <section class="space-y-4">
+      <div class="flex items-center justify-between px-2 font-mono text-xs text-muted">
+        <span class="uppercase tracking-widest text-forest font-semibold">System Demonstration</span>
+        <span>CreativeVideoMasking · UHD Stream</span>
+      </div>
+
+      <div class="rounded-3xl border border-line bg-white/80 p-3 sm:p-4 shadow-xl">
+        <div class="relative w-full overflow-hidden rounded-2xl bg-black">
+          <div class="video-mask w-full h-full relative z-10">
+            <video autoplay muted loop playsinline class="w-full h-full object-cover">
+              <source src="https://videos.pexels.com/video-files/7710243/7710243-uhd_2560_1440_30fps.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHIPPED PRODUCTION SYSTEMS (Bento Cards with Swiss Editorial Framing & Standalone iframes) -->
+    <section id="systems" class="space-y-12">
+      
+      <!-- Section Header -->
+      <div class="border-t border-ink pt-10 flex flex-col sm:flex-row sm:items-baseline justify-between gap-4">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-widest text-forest font-semibold">Catalog of Production Systems</span>
+          <h2 class="text-4xl sm:text-6xl font-serif text-ink italic mt-1">Shipped Engineering Work</h2>
+        </div>
+        <div class="font-mono text-xs text-muted sm:text-right">
+          <span class="px-2.5 py-1 rounded-full bg-white border border-line text-ink font-semibold">5 Active Production Deployments</span>
+          <p class="mt-1">Full-stack · Real Users · Zero Fake Metrics</p>
+        </div>
+      </div>
+
+      <!-- SYSTEM 01: Nubifurn Storefront -->
+      <article class="bg-card rounded-3xl p-6 sm:p-10 border border-line shadow-sm space-y-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+          <div class="lg:col-span-8 space-y-2">
+            <div class="flex flex-wrap items-center gap-2 font-mono text-xs">
+              <span class="px-2.5 py-0.5 rounded-md bg-forest/10 text-forest font-bold uppercase">System 01</span>
+              <span class="text-muted">·</span>
+              <span class="text-muted uppercase">E-Commerce & Showroom</span>
+              <span class="text-muted">·</span>
+              <span class="text-emerald-700 font-semibold">Live Production</span>
+            </div>
+            <h3 class="text-3xl sm:text-4xl font-serif text-ink font-normal">Nubifurn Luxury Furniture Storefront</h3>
+            <p class="text-subtle text-sm sm:text-base leading-relaxed">
+              Custom digital showroom engineered for South African furniture brand Nubifurn. Built to eliminate lag and maximize buyer trust with real-time fabric customizations, dynamic pricing formulas, and instant catalog transitions.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-2.5 py-1 rounded-lg bg-paper font-mono text-xs text-ink font-medium">Next.js 15 (App Router)</span>
+              <span class="px-2.5 py-1 rounded-lg bg-paper font-mono text-xs text-ink font-medium">React 19</span>
+              <span class="px-2.5 py-1 rounded-lg bg-paper font-mono text-xs text-ink font-medium">FastAPI</span>
+              <span class="px-2.5 py-1 rounded-lg bg-paper font-mono text-xs text-ink font-medium">Railway</span>
+              <span class="px-2.5 py-1 rounded-lg bg-paper font-mono text-xs text-ink font-medium">Vercel</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4 flex flex-col lg:items-end justify-between gap-4 h-full">
+            <a href="https://nubifurn-frontend.vercel.app/" target="_blank" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-forest hover:bg-forestDark text-white font-medium text-xs text-center transition-all shadow-sm flex items-center justify-center gap-1.5">
+              <span>Launch Live Storefront</span>
+              <span>↗</span>
+            </a>
+            <span class="font-mono text-[11px] text-muted">Host: nubifurn-frontend.vercel.app</span>
+          </div>
+        </div>
+
+        <!-- Standalone Live Interactive Viewport -->
+        <div class="rounded-2xl border border-line bg-stone-900 overflow-hidden shadow-inner">
+          <div class="h-9 px-4 bg-stone-950 border-b border-stone-800 flex items-center justify-between text-[11px] font-mono text-stone-400">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
+              <span class="ml-2 text-stone-300">https://nubifurn-frontend.vercel.app</span>
+            </div>
+            <span class="text-emerald-400 font-semibold">Active Sandbox</span>
+          </div>
+          <iframe src="https://nubifurn-frontend.vercel.app/" class="w-full h-[520px] bg-white border-0" loading="lazy" title="Nubifurn Storefront"></iframe>
+        </div>
+      </article>
+
+      <!-- SYSTEM 02: Nubifurn Operations Dashboard -->
+      <article class="bg-card rounded-3xl p-6 sm:p-10 border border-line shadow-sm space-y-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+          <div class="lg:col-span-8 space-y-2">
+            <div class="flex flex-wrap items-center gap-2 font-mono text-xs">
+              <span class="px-2.5 py-0.5 rounded-md bg-forest/10 text-forest font-bold uppercase">System 02</span>
+              <span class="text-muted">·</span>
+              <span class="text-muted uppercase">Internal Operations & Logistics</span>
+              <span class="text-muted">·</span>
+              <span class="text-emerald-700 font-semibold">Live Production</span>
+            </div>
+            <h3 class="text-3xl sm:text-4xl font-serif text-ink font-normal">Nubifurn Orders & Inventory Engine</h3>
+            <p class="text-subtle text-sm sm:text-base leading-relaxed">
+              Mission-critical warehouse and logistics dashboard. Gives the management team real-time tracking over custom order queues, production stage pipelines, supplier material status, and customer fulfillment logs.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-2.5 py-1 rounded-lg bg-paper font-mono text-xs text-ink font-medium">FastAPI (Python)</span>
+              <span class="px-2.5 py-1 rounded-lg bg-paper font-mono text-xs text-ink font-medium">PostgreSQL</span>
+              <span class="px-2.5 py-1 rounded-lg bg-paper font-mono text-xs text-ink font-medium">Next.js 15</span>
+              <span class="px-2.5 py-1 rounded-lg bg-paper font-mono text-xs text-ink font-medium">Railway Cloud</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4 flex flex-col lg:items-end justify-between gap-4 h-full">
+            <a href="https://nubifurn.vercel.app/" target="_blank" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-forest hover:bg-forestDark text-white font-medium text-xs text-center transition-all shadow-sm flex items-center justify-center gap-1.5">
+              <span>Inspect Operations Engine</span>
+              <span>↗</span>
+            </a>
+            <span class="font-mono text-[11px] text-muted">Host: nubifurn.vercel.app</span>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-line bg-stone-900 overflow-hidden shadow-inner">
+          <div class="h-9 px-4 bg-stone-950 border-b border-stone-800 flex items-center justify-between text-[11px] font-mono text-stone-400">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
+              <span class="ml-2 text-stone-300">https://nubifurn.vercel.app</span>
+            </div>
+            <span class="text-emerald-400 font-semibold">Active Sandbox</span>
+          </div>
+          <iframe src="https://nubifurn.vercel.app/" class="w-full h-[520px] bg-white border-0" loading="lazy" title="Nubifurn Dashboard"></iframe>
+        </div>
+      </article>
+
+      <!-- SYSTEM 03: AuraWorks Platform -->
+      <article class="bg-card rounded-3xl p-6 sm:p-10 border border-line shadow-sm space-y-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+          <div class="lg:col-span-8 space-y-2">
+            <div class="flex flex-wrap items-center gap-2 font-mono text-xs">
+              <span class="px-2.5 py-0.5 rounded-md bg-forest/10 text-forest font-bold uppercase">System 03</span>
+              <span class="text-muted">·</span>
+              <span class="text-muted uppercase">Studio Flagship & Systems</span>
+              <span class="text-muted">·</span>
+              <span class="text-emerald-700 font-semibold">Live Production</span>
+            </div>
+            <h3 class="text-3xl sm:text-4xl font-serif text-ink font-normal">AuraWorks (Pty) Ltd Platform</h3>
+            <p class="text-subtle text-sm sm:text-base leading-relaxed">
+              Official commercial platform for my registered software development practice. Showcasing software architecture principles, client onboarding workflows, and production systems consultation.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-2.5 py-1 rounded-lg bg-paper font-mono text-xs text-ink font-medium">Next.js</span>
+              <span class="px-2.5 py-1 rounded-lg bg-paper font-mono text-xs text-ink font-medium">TypeScript</span>
+              <span class="px-2.5 py-1 rounded-lg bg-paper font-mono text-xs text-ink font-medium">Tailwind CSS</span>
+              <span class="px-2.5 py-1 rounded-lg bg-paper font-mono text-xs text-ink font-medium">Railway</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4 flex flex-col lg:items-end justify-between gap-4 h-full">
+            <a href="https://www.auraworks.co.za/" target="_blank" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-forest hover:bg-forestDark text-white font-medium text-xs text-center transition-all shadow-sm flex items-center justify-center gap-1.5">
+              <span>Visit auraworks.co.za</span>
+              <span>↗</span>
+            </a>
+            <span class="font-mono text-[11px] text-muted">Host: auraworks.co.za</span>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-line bg-stone-900 overflow-hidden shadow-inner">
+          <div class="h-9 px-4 bg-stone-950 border-b border-stone-800 flex items-center justify-between text-[11px] font-mono text-stone-400">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
+              <span class="ml-2 text-stone-300">https://www.auraworks.co.za</span>
+            </div>
+            <span class="text-emerald-400 font-semibold">Active Sandbox</span>
+          </div>
+          <iframe src="https://www.auraworks.co.za/" class="w-full h-[520px] bg-white border-0" loading="lazy" title="AuraWorks Platform"></iframe>
+        </div>
+      </article>
+
+      <!-- SYSTEM 04 & 05: FLP Church & Tilulu (Two Dedicated Bento Split Cards) -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        <!-- FLP Church -->
+        <article class="bg-card rounded-3xl p-6 sm:p-8 border border-line shadow-sm space-y-5">
+          <div class="space-y-2">
+            <div class="flex items-center gap-2 font-mono text-xs">
+              <span class="px-2 py-0.5 rounded bg-forest/10 text-forest font-bold uppercase">System 04</span>
+              <span class="text-muted">·</span>
+              <span class="text-muted">Community Portal</span>
+            </div>
+            <h3 class="text-2xl font-serif text-ink">FLP Church Platform</h3>
+            <p class="text-subtle text-xs sm:text-sm leading-relaxed">
+              Digital hub engineered for a growing community. Features media archiving, event broadcasting, and high-concurrency mobile access.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="px-2 py-0.5 rounded bg-paper font-mono text-[11px] text-ink">Next.js</span>
+              <span class="px-2 py-0.5 rounded bg-paper font-mono text-[11px] text-ink">TypeScript</span>
+              <span class="px-2 py-0.5 rounded bg-paper font-mono text-[11px] text-ink">Tailwind CSS</span>
+            </div>
+          </div>
+          <div class="rounded-xl border border-line overflow-hidden">
+            <iframe src="https://flp-woad.vercel.app/" class="w-full h-[380px] bg-white border-0" loading="lazy" title="FLP Church"></iframe>
+          </div>
+          <div class="flex items-center justify-between pt-2">
+            <span class="font-mono text-[11px] text-muted">flp-woad.vercel.app</span>
+            <a href="https://flp-woad.vercel.app/" target="_blank" class="text-xs font-semibold text-forest hover:underline">Launch System ↗</a>
+          </div>
+        </article>
+
+        <!-- Tilulu Portal -->
+        <article class="bg-card rounded-3xl p-6 sm:p-8 border border-line shadow-sm space-y-5">
+          <div class="space-y-2">
+            <div class="flex items-center gap-2 font-mono text-xs">
+              <span class="px-2 py-0.5 rounded bg-forest/10 text-forest font-bold uppercase">System 05</span>
+              <span class="text-muted">·</span>
+              <span class="text-muted">Digital Impact</span>
+            </div>
+            <h3 class="text-2xl font-serif text-ink">Tilulu Non-Profit Portal</h3>
+            <p class="text-subtle text-xs sm:text-sm leading-relaxed">
+              Transparent outreach platform connecting social initiatives with supporters. Built with accessible UI components and lightweight architecture.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="px-2 py-0.5 rounded bg-paper font-mono text-[11px] text-ink">Next.js 15</span>
+              <span class="px-2 py-0.5 rounded bg-paper font-mono text-[11px] text-ink">Tailwind CSS</span>
+              <span class="px-2 py-0.5 rounded bg-paper font-mono text-[11px] text-ink">Vercel</span>
+            </div>
+          </div>
+          <div class="rounded-xl border border-line overflow-hidden">
+            <iframe src="https://tilulu.vercel.app/" class="w-full h-[380px] bg-white border-0" loading="lazy" title="Tilulu Portal"></iframe>
+          </div>
+          <div class="flex items-center justify-between pt-2">
+            <span class="font-mono text-[11px] text-muted">tilulu.vercel.app</span>
+            <a href="https://tilulu.vercel.app/" target="_blank" class="text-xs font-semibold text-forest hover:underline">Launch System ↗</a>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- TECHNICAL STACK: Bento Tiles with Swiss Forest Green Accents -->
+    <section id="stack" class="space-y-8">
+      
+      <div class="border-t border-ink pt-10 flex flex-col sm:flex-row sm:items-baseline justify-between gap-4">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-widest text-forest font-semibold">Technical Architecture</span>
+          <h2 class="text-4xl sm:text-5xl font-serif text-ink italic mt-1">Tools & Production Foundation</h2>
+        </div>
+        <p class="text-xs font-mono text-muted max-w-sm">
+          Disciplined, production-tested choices. No bloated dependency trees, no toy prototypes.
+        </p>
+      </div>
+
+      <!-- 4 Bento Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Languages Card -->
+        <div class="bg-card rounded-3xl p-6 sm:p-7 border border-line shadow-sm space-y-4 hover:border-forest/40 transition-colors">
+          <div class="flex items-center justify-between">
+            <span class="font-mono text-xs font-bold text-forest uppercase tracking-wider">01 · Languages</span>
+            <span class="w-2 h-2 rounded-full bg-forest"></span>
+          </div>
+          <h4 class="font-serif text-2xl text-ink">Core Syntax</h4>
+          <ul class="font-mono text-xs space-y-2.5 text-subtle">
+            <li class="flex items-center justify-between">
+              <span class="text-ink font-semibold">TypeScript</span>
+              <span class="text-muted text-[10px]">Strict Full-Stack</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="text-ink font-semibold">Python</span>
+              <span class="text-muted text-[10px]">Core / Async</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="text-ink font-semibold">SQL</span>
+              <span class="text-muted text-[10px]">Relational Schema</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="text-ink font-semibold">JavaScript</span>
+              <span class="text-muted text-[10px]">ES2024</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="text-ink font-semibold">HTML5 / CSS3</span>
+              <span class="text-muted text-[10px]">Modern Semantic</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Frontend Card -->
+        <div class="bg-card rounded-3xl p-6 sm:p-7 border border-line shadow-sm space-y-4 hover:border-forest/40 transition-colors">
+          <div class="flex items-center justify-between">
+            <span class="font-mono text-xs font-bold text-forest uppercase tracking-wider">02 · Frontend</span>
+            <span class="w-2 h-2 rounded-full bg-forest"></span>
+          </div>
+          <h4 class="font-serif text-2xl text-ink">Client & SSR</h4>
+          <ul class="font-mono text-xs space-y-2.5 text-subtle">
+            <li class="flex items-center justify-between">
+              <span class="text-ink font-semibold">Next.js 15</span>
+              <span class="text-muted text-[10px]">App Router / RSC</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="text-ink font-semibold">React 19</span>
+              <span class="text-muted text-[10px]">Hooks / Actions</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="text-ink font-semibold">Tailwind CSS v4</span>
+              <span class="text-muted text-[10px]">Modern Tokenized</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="text-ink font-semibold">Framer Motion</span>
+              <span class="text-muted text-[10px]">Micro-Interactions</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="text-ink font-semibold">Responsive Web</span>
+              <span class="text-muted text-[10px]">Mobile-First</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Backend & DB Card (Strictly FastAPI, Python, PostgreSQL) -->
+        <div class="bg-card rounded-3xl p-6 sm:p-7 border border-line shadow-sm space-y-4 hover:border-forest/40 transition-colors">
+          <div class="flex items-center justify-between">
+            <span class="font-mono text-xs font-bold text-forest uppercase tracking-wider">03 · Backend & DB</span>
+            <span class="w-2 h-2 rounded-full bg-forest"></span>
+          </div>
+          <h4 class="font-serif text-2xl text-ink">Server Systems</h4>
+          <ul class="font-mono text-xs space-y-2.5 text-subtle">
+            <li class="flex items-center justify-between">
+              <span class="text-ink font-semibold">FastAPI</span>
+              <span class="text-muted text-[10px]">High-Perf REST</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="text-ink font-semibold">PostgreSQL</span>
+              <span class="text-muted text-[10px]">ACID Relational</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="text-ink font-semibold">SQLAlchemy</span>
+              <span class="text-muted text-[10px]">ORM / Core</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="text-ink font-semibold">Pydantic v2</span>
+              <span class="text-muted text-[10px]">Runtime Validation</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="text-ink font-semibold">Webhook APIs</span>
+              <span class="text-muted text-[10px]">Async Events</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Infrastructure Card (Railway, Vercel, Cloudflare, Linux) -->
+        <div class="bg-card rounded-3xl p-6 sm:p-7 border border-line shadow-sm space-y-4 hover:border-forest/40 transition-colors">
+          <div class="flex items-center justify-between">
+            <span class="font-mono text-xs font-bold text-forest uppercase tracking-wider">04 · Infrastructure</span>
+            <span class="w-2 h-2 rounded-full bg-forest"></span>
+          </div>
+          <h4 class="font-serif text-2xl text-ink">DevOps & Cloud</h4>
+          <ul class="font-mono text-xs space-y-2.5 text-subtle">
+            <li class="flex items-center justify-between">
+              <span class="text-ink font-semibold">Railway</span>
+              <span class="text-muted text-[10px]">Container Backend</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="text-ink font-semibold">Vercel</span>
+              <span class="text-muted text-[10px]">Global Edge Frontend</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="text-ink font-semibold">Cloudflare</span>
+              <span class="text-muted text-[10px]">DNS, SSL & WAF</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="text-ink font-semibold">Docker & Linux</span>
+              <span class="text-muted text-[10px]">Environment Isolation</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="text-ink font-semibold">Git & CI/CD</span>
+              <span class="text-muted text-[10px]">Automated Pipelines</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- BACKGROUND & METHODOLOGY: Swiss Editorial Timeline -->
+    <section id="timeline" class="space-y-10">
+      
+      <div class="border-t border-ink pt-10">
+        <span class="font-mono text-xs uppercase tracking-widest text-forest font-semibold">The Narrative</span>
+        <h2 class="text-4xl sm:text-5xl font-serif text-ink italic mt-1">From Commercial Execution to Systems Architecture</h2>
+        <p class="text-subtle text-base max-w-3xl mt-3 leading-relaxed">
+          I didn't approach development as a detached hobby. My path began in direct business and high-volume commercial operations, where I witnessed how clunky software bottlenecks sales, frustrates customers, and bleeds operational margin. That experience directly shapes how I write code today.
+        </p>
+      </div>
+
+      <!-- 3-Phase Editorial Monograph Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="bg-card rounded-3xl p-6 sm:p-8 border border-line space-y-4">
+          <div class="font-mono text-xs text-forest font-bold uppercase">Phase 01 · 2021–2023</div>
+          <h3 class="font-serif text-2xl text-ink">Commercial & Sales Operations</h3>
+          <p class="text-subtle text-xs sm:text-sm leading-relaxed">
+            Hands-on frontline sales, customer acquisition, and enterprise client relationships. Learned unit economics, conversion psychology, and the absolute necessity of removing friction from customer journeys.
+          </p>
+        </div>
+
+        <div class="bg-card rounded-3xl p-6 sm:p-8 border border-line space-y-4">
+          <div class="font-mono text-xs text-forest font-bold uppercase">Phase 02 · 2023–2024</div>
+          <h3 class="font-serif text-2xl text-ink">The Engineering Transition</h3>
+          <p class="text-subtle text-xs sm:text-sm leading-relaxed">
+            Transitioned fully into computer science and software development. Intensive self-directed mastery of Python, FastAPI, TypeScript, React, and relational database modeling, treating engineering as an exacting craft.
+          </p>
+        </div>
+
+        <div class="bg-card rounded-3xl p-6 sm:p-8 border border-line space-y-4">
+          <div class="font-mono text-xs text-forest font-bold uppercase">Phase 03 · 2024–Present</div>
+          <h3 class="font-serif text-2xl text-ink">Founding AuraWorks & Production Systems</h3>
+          <p class="text-subtle text-xs sm:text-sm leading-relaxed">
+            Founded AuraWorks (Pty) Ltd. Shipping real-world production systems for furniture brands, organizations, and platforms. Architecting reliable software with measurable commercial return.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- PUBLISHED MONOGRAPH: The Book -->
+    <section id="monograph" class="bg-card rounded-3xl p-8 sm:p-12 border border-line shadow-sm space-y-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-8 space-y-4">
+          <div class="inline-flex items-center gap-2 font-mono text-xs uppercase text-forest font-bold">
+            <span class="w-1.5 h-1.5 rounded-full bg-forest"></span>
+            <span>Published Monograph · 75 Pages</span>
+          </div>
+          <h3 class="text-3xl sm:text-5xl font-serif text-ink">The Ecommerce Startup That Sells</h3>
+          <p class="text-subtle text-sm sm:text-base leading-relaxed max-w-2xl">
+            Written at age 19 by Allen Reiley (Reitumetse Sethabela). A concentrated treatise detailing standard operating procedures, customer acquisition mechanics, client service contracts, and operational psychology for new commerce ventures.
+          </p>
+          <div class="flex items-center gap-4 text-xs font-mono text-muted pt-2">
+            <span>Format: Digital PDF</span>
+            <span>·</span>
+            <span>File Size: 4.1 MB</span>
+            <span>·</span>
+            <span>Distribution: Free Public Access</span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col items-start lg:items-end gap-4">
+          <a href="../frontend/public/book/the-ecommerce-startup-that-sells.pdf" download class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-forest hover:bg-forestDark text-white font-semibold text-xs tracking-wide transition-all shadow-md flex items-center justify-center gap-2">
+            <span>Download Monograph (PDF)</span>
+            <span>↓</span>
+          </a>
+          <span class="text-[11px] font-mono text-muted">Direct Download · No Email Required</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GLOBAL WORK & ROTATING GLOBE SECTION -->
+    <section class="border-t border-ink pt-16 text-center space-y-6">
+      <div class="max-w-2xl mx-auto space-y-3">
+        <span class="font-mono text-xs uppercase tracking-widest text-forest font-semibold">Worldwide Distributed Capability</span>
+        <h2 class="text-4xl sm:text-5xl font-serif text-ink italic">Based in Johannesburg, Operating Worldwide</h2>
+        <p class="text-subtle text-sm sm:text-base leading-relaxed">
+          Headquartered in Johannesburg, South Africa (UTC+2 / Central European Time compatible). Seamlessly collaborating with engineering teams and commercial clients across London, New York, and Sub-Saharan Africa.
+        </p>
+      </div>
+
+      <!-- Isometric Globe Graphic Placeholder / Visual Badge -->
+      <div class="pt-4 flex justify-center">
+        <div class="relative w-40 h-40 rounded-full border border-forest/30 bg-white/60 flex items-center justify-center shadow-lg">
+          <div class="absolute inset-2 rounded-full border border-dashed border-forest/40 animate-[spin_20s_linear_infinite]"></div>
+          <div class="text-center font-mono text-[10px] space-y-1">
+            <span class="block text-xl">🌍</span>
+            <span class="font-bold text-forest uppercase">UTC +02:00</span>
+            <span class="text-muted block">JHB · ZA</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DUAL INQUIRY PATHS: Recruiters & Commercial Clients -->
+    <section id="contact" class="border-t border-line pt-16 space-y-10">
+      
+      <div class="text-center max-w-xl mx-auto space-y-2">
+        <span class="font-mono text-xs uppercase tracking-widest text-forest font-semibold">Get In Touch</span>
+        <h2 class="text-4xl sm:text-5xl font-serif text-ink">Two Distinct Ways to Connect</h2>
+        <p class="text-subtle text-xs sm:text-sm">
+          Whether you are an engineering team hiring a full-stack builder, or a business looking to deploy a commercial system.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Path A: Hiring For an Engineering Role -->
+        <div class="bg-card rounded-3xl p-8 sm:p-10 border border-line shadow-sm space-y-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs uppercase font-bold text-forest tracking-wider">Option A · Recruitment</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 font-mono text-[10px] font-bold">Open to Offers</span>
+            </div>
+            <h3 class="text-3xl font-serif text-ink">Hiring for an Engineering Role?</h3>
+            <p class="text-subtle text-xs sm:text-sm leading-relaxed">
+              Seeking a self-starting Full-Stack Developer with strict TypeScript, Python/FastAPI, and Next.js 15 capabilities? I write clean code, communicate with commercial awareness, and own features from database schema to responsive frontend.
+            </p>
+            <ul class="font-mono text-xs space-y-1.5 text-muted pt-2">
+              <li>• Full-Stack Developer / Software Engineer</li>
+              <li>• Remote (Global) or Hybrid (Johannesburg)</li>
+              <li>• Inspect code on GitHub or request full CV</li>
+            </ul>
+          </div>
+
+          <div class="pt-6 border-t border-line flex flex-wrap items-center gap-3">
+            <a href="mailto:rsethabela@auraworks.co.za" class="px-5 py-3 rounded-xl bg-forest hover:bg-forestDark text-white text-xs font-semibold transition-all">
+              Email Directly ✉
+            </a>
+            <a href="https://github.com/Allen-Reiley" target="_blank" class="px-5 py-3 rounded-xl bg-paper hover:bg-stone-200 text-ink text-xs font-semibold transition-all">
+              Inspect GitHub ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Path B: Commercial Systems & Client Projects -->
+        <div class="bg-card rounded-3xl p-8 sm:p-10 border border-line shadow-sm space-y-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs uppercase font-bold text-forest tracking-wider">Option B · Direct Client</span>
+              <span class="px-2 py-0.5 rounded bg-forest/10 text-forest font-mono text-[10px] font-bold">Consultation</span>
+            </div>
+            <h3 class="text-3xl font-serif text-ink">Building a Custom System?</h3>
+            <p class="text-subtle text-xs sm:text-sm leading-relaxed">
+              Have an operational bottleneck, dynamic catalog requirement, inventory challenge, or custom web platform to build? Let's analyze your architecture, operational objectives, and technical scope.
+            </p>
+            <ul class="font-mono text-xs space-y-1.5 text-muted pt-2">
+              <li>• Bespoke E-Commerce Storefronts & Showrooms</li>
+              <li>• Warehouse & Operations Logistics Portals</li>
+              <li>• High-Performance Internal Business Workflows</li>
+            </ul>
+          </div>
+
+          <div class="pt-6 border-t border-line flex flex-wrap items-center gap-3">
+            <a href="https://cal.com/reitumetse-sethabela/30min" target="_blank" class="px-6 py-3 rounded-xl bg-forest hover:bg-forestDark text-white text-xs font-semibold transition-all shadow-sm">
+              Schedule 30-Min Call ↗
+            </a>
+            <a href="https://www.auraworks.co.za/" target="_blank" class="px-5 py-3 rounded-xl bg-paper hover:bg-stone-200 text-ink text-xs font-semibold transition-all">
+              AuraWorks Studio ↗
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- EDITORIAL FOOTER -->
+  <footer class="border-t border-line bg-paper mt-20 py-12 px-6 sm:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-muted font-mono">
+      <div class="flex items-center gap-3">
+        <span class="font-serif italic text-lg text-ink font-bold font-sans">Reitumetse Sethabela</span>
+        <span>·</span>
+        <span>AuraWorks (Pty) Ltd</span>
+      </div>
+      <div>
+        <span>Architected with Next.js 15, FastAPI & Tailwind CSS</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://github.com/Allen-Reiley" target="_blank" class="hover:text-ink transition-colors">GitHub</a>
+        <a href="https://cal.com/reitumetse-sethabela/30min" target="_blank" class="hover:text-ink transition-colors">Cal.com</a>
+        <a href="https://www.auraworks.co.za/" target="_blank" class="hover:text-ink transition-colors">AuraWorks</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design 02: Swiss Editorial — Reitumetse Sethabela</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Instrument Serif"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            paper: '#F4F3ED',
+            ink: '#161614',
+            subtle: '#62625C',
+            line: 'rgba(22, 22, 20, 0.08)',
+            forest: '#1E4A38',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #F4F3ED;
+      color: #161614;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .video-mask {
+      aspect-ratio: 1213/667;
+      mask-image: url("data:image/svg+xml,%3Csvg width='221' height='122' viewBox='0 0 221 122' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fillRule='evenodd' clipRule='evenodd' d='M183 4C183 1.79086 184.791 0 187 0H217C219.209 0 221 1.79086 221 4V14V28V99C221 101.209 219.209 103 217 103H182C179.791 103 178 104.791 178 107V118C178 120.209 176.209 122 174 122H28C25.7909 122 24 120.209 24 118V103V94V46C24 43.7909 22.2091 42 20 42H4C1.79086 42 0 40.2091 0 38V18C0 15.7909 1.79086 14 4 14H24H43H179C181.209 14 183 12.2091 183 10V4Z' fill='%23D9D9D9'/%3E%3C/svg%3E%0A");
+      -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='221' height='122' viewBox='0 0 221 122' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fillRule='evenodd' clipRule='evenodd' d='M183 4C183 1.79086 184.791 0 187 0H217C219.209 0 221 1.79086 221 4V14V28V99C221 101.209 219.209 103 217 103H182C179.791 103 178 104.791 178 107V118C178 120.209 176.209 122 174 122H28C25.7909 122 24 120.209 24 118V103V94V46C24 43.7909 22.2091 42 20 42H4C1.79086 42 0 40.2091 0 38V18C0 15.7909 1.79086 14 4 14H24H43H179C181.209 14 183 12.2091 183 10V4Z' fill='%23D9D9D9'/%3E%3C/svg%3E%0A");
+      mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat;
+      mask-size: contain;
+      -webkit-mask-size: contain;
+    }
+  </style>
+</head>
+<body class="selection:bg-forest selection:text-white">
+
+  <!-- Editorial Top Ribbon -->
+  <header class="border-b border-line py-6 px-8 max-w-7xl mx-auto flex items-baseline justify-between">
+    <div class="space-y-0.5">
+      <span class="font-serif italic text-2xl tracking-tight text-ink font-bold">Reitumetse Sethabela</span>
+      <p class="text-[11px] uppercase tracking-widest text-subtle">Johannesburg · Founder, AuraWorks (Pty) Ltd</p>
+    </div>
+
+    <nav class="hidden sm:flex items-center gap-8 text-xs font-medium uppercase tracking-wider text-subtle">
+      <a href="#systems" class="hover:text-ink transition-colors">Systems</a>
+      <a href="#toolchain" class="hover:text-ink transition-colors">Toolchain</a>
+      <a href="#monograph" class="hover:text-ink transition-colors">Monograph</a>
+      <a href="https://cal.com/reitumetse-sethabela/30min" target="_blank" class="text-forest font-bold underline underline-offset-4">Schedule Call ↗</a>
+    </nav>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-8 pt-20 pb-32 space-y-36">
+
+    <!-- HERO SECTION -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 space-y-8">
+        <div class="space-y-4">
+          <span class="text-xs uppercase tracking-widest font-semibold text-forest">Full-Stack Systems & Product Architecture</span>
+          <h1 class="text-6xl sm:text-8xl font-serif leading-[0.95] tracking-tight text-ink">
+            Crafting software with <em class="italic text-forest">commercial</em> intent.
+          </h1>
+          <p class="text-xl sm:text-2xl text-subtle font-light leading-relaxed max-w-2xl pt-4">
+            I engineer web applications, headless commerce systems, and internal operational portals. Combining technical mastery with commercial psychology to build tools that endure.
+          </p>
+        </div>
+
+        <div class="pt-4 flex flex-wrap items-center gap-6 text-sm">
+          <a href="https://cal.com/reitumetse-sethabela/30min" target="_blank" class="px-7 py-3.5 rounded-full bg-ink text-white font-medium hover:bg-forest transition-colors">
+            Book 30-Minute Architecture Session
+          </a>
+          <a href="#systems" class="text-subtle hover:text-ink underline underline-offset-4">
+            View Shipped Systems ↓
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Framed Cutout Portrait -->
+      <div class="lg:col-span-5 flex justify-center lg:justify-end items-end">
+        <div class="relative w-full max-w-[340px] h-[540px] flex items-end justify-center">
+          <img src="images/reitumetse-chest.png" onerror="this.onerror=null;this.src='../frontend/public/images/reitumetse-chest.png';" alt="Reitumetse Sethabela" class="h-full object-contain object-bottom drop-shadow-xl">
+        </div>
+      </div>
+    </section>
+
+    <!-- MASKED VIDEO DIRECTLY UNDER HERO -->
+    <section class="flex flex-col items-center justify-center pt-8">
+      <div class="relative w-full max-w-3xl aspect-[221/122]">
+        <div class="w-full h-full video-mask bg-ink overflow-hidden shadow-2xl">
+          <video autoplay muted loop playsinline class="w-full h-full object-cover">
+            <source src="https://videos.pexels.com/video-files/7710243/7710243-uhd_2560_1440_30fps.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHIPPED SYSTEMS WITH IFRAMES -->
+    <section id="systems" class="space-y-32">
+      <div class="border-t border-ink pt-12 flex flex-col sm:flex-row sm:items-baseline justify-between">
+        <h2 class="text-4xl sm:text-6xl font-serif italic text-ink">Shipped Systems & Flagships</h2>
+        <span class="text-xs font-mono uppercase tracking-widest text-subtle">Case Catalog 2024–2026</span>
+      </div>
+
+      <!-- Nubifurn Storefront -->
+      <article class="space-y-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-baseline">
+          <div class="md:col-span-4 space-y-2">
+            <span class="text-xs font-mono uppercase text-subtle">Exhibit 01 · E-Commerce</span>
+            <h3 class="text-3xl font-serif text-ink">Nubifurn Storefront</h3>
+            <p class="text-xs text-subtle">Next.js 15, React 19, FastAPI, Railway, Vercel</p>
+          </div>
+          <div class="md:col-span-8 space-y-4">
+            <p class="text-base text-subtle leading-relaxed">
+              Bespoke luxury furniture showroom engineered for Nubifurn South Africa. Features real-time fabric customizer, instantaneous pricing updates, and sub-second cellular page transitions.
+            </p>
+            <a href="https://nubifurn-frontend.vercel.app/" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-forest hover:underline">
+              <span>Inspect Live Storefront</span> →
+            </a>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-line bg-white shadow-xl overflow-hidden">
+          <div class="h-10 px-4 bg-paper/60 border-b border-line flex items-center justify-between text-xs text-subtle font-mono">
+            <span>nubifurn-frontend.vercel.app</span>
+            <span>Production Verified</span>
+          </div>
+          <iframe src="https://nubifurn-frontend.vercel.app/" class="w-full h-[550px] border-0" loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <!-- Nubifurn Dashboard -->
+      <article class="space-y-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-baseline">
+          <div class="md:col-span-4 space-y-2">
+            <span class="text-xs font-mono uppercase text-subtle">Exhibit 02 · Internal Operations</span>
+            <h3 class="text-3xl font-serif text-ink">Nubifurn Orders & Inventory</h3>
+            <p class="text-xs text-subtle">FastAPI, Python, PostgreSQL, Railway</p>
+          </div>
+          <div class="md:col-span-8 space-y-4">
+            <p class="text-base text-subtle leading-relaxed">
+              Internal business management portal enabling warehouse managers to track dynamic furniture orders, synchronize multi-branch stock levels, and automate customer inquiry status updates.
+            </p>
+            <a href="https://nubifurn.vercel.app/" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-forest hover:underline">
+              <span>Inspect Live Dashboard</span> →
+            </a>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-line bg-white shadow-xl overflow-hidden">
+          <div class="h-10 px-4 bg-paper/60 border-b border-line flex items-center justify-between text-xs text-subtle font-mono">
+            <span>nubifurn.vercel.app</span>
+            <span>Production Verified</span>
+          </div>
+          <iframe src="https://nubifurn.vercel.app/" class="w-full h-[550px] border-0" loading="lazy"></iframe>
+        </div>
+      </article>
+    </section>
+
+    <!-- TOOLCHAIN -->
+    <section id="toolchain" class="border-t border-line pt-20 space-y-12">
+      <div class="space-y-2">
+        <span class="text-xs uppercase tracking-widest text-subtle font-semibold">Technical Foundation</span>
+        <h2 class="text-4xl font-serif text-ink">Languages, Frameworks & Infrastructure</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-sm">
+        <div class="space-y-3">
+          <h4 class="font-serif italic text-lg text-ink font-bold">Languages</h4>
+          <p class="text-subtle text-xs leading-relaxed">TypeScript, Python, SQL, JavaScript, HTML5 & CSS3.</p>
+        </div>
+        <div class="space-y-3">
+          <h4 class="font-serif italic text-lg text-ink font-bold">Frontend</h4>
+          <p class="text-subtle text-xs leading-relaxed">Next.js 15, React 19, Tailwind CSS v4, Motion.</p>
+        </div>
+        <div class="space-y-3">
+          <h4 class="font-serif italic text-lg text-ink font-bold">Backend</h4>
+          <p class="text-subtle text-xs leading-relaxed">FastAPI, Python Core, PostgreSQL, REST APIs.</p>
+        </div>
+        <div class="space-y-3">
+          <h4 class="font-serif italic text-lg text-ink font-bold">Infrastructure</h4>
+          <p class="text-subtle text-xs leading-relaxed">Railway, Vercel, Cloudflare, Linux, Git.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MONOGRAPH -->
+    <section id="monograph" class="border-t border-ink pt-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div class="lg:col-span-8 space-y-4">
+        <span class="text-xs uppercase tracking-widest text-forest font-semibold">Publication · 75 Pages</span>
+        <h2 class="text-4xl sm:text-5xl font-serif text-ink">The Ecommerce Startup That Sells</h2>
+        <p class="text-subtle leading-relaxed">
+          Written at age 19 as an operational blueprint detailing contractor legal agreements, standard operating procedures, and consumer decision psychology. Available freely.
+        </p>
+      </div>
+      <div class="lg:col-span-4 flex lg:justify-end">
+        <a href="../frontend/public/book/the-ecommerce-startup-that-sells.pdf" download class="px-8 py-4 rounded-full bg-forest text-white font-medium text-xs hover:bg-ink transition-colors">
+          Download PDF (4.1 MB)
+        </a>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

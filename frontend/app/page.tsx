@@ -1,69 +1,60 @@
-import Image from "next/image";
+import { SiteHeader } from "@/components/navbar/site-header";
+import { SiteFooter } from "@/components/footer/site-footer";
+import { HeroSection } from "@/components/home/hero-section";
+import { NubifurnVideoReview } from "@/components/home/nubifurn-video-review";
+import { ShippedSystemsShowcase } from "@/components/home/shipped-systems-showcase";
+import { AiMethodologySection } from "@/components/home/ai-methodology-section";
+import { TechStackSection } from "@/components/home/tech-stack-section";
+import { TimelineNarrativeSection } from "@/components/home/timeline-narrative-section";
+import { GlobalCapabilityCard } from "@/components/home/global-capability-card";
+import { BookShowcaseSection } from "@/components/home/book-showcase-section";
+import { RecentWritingSection } from "@/components/home/recent-writing-section";
+import { CtaSection } from "@/components/home/cta-section";
+import { getAllPosts } from "@/lib/blog";
 
 export default function Home() {
+  const recentPosts = getAllPosts().slice(0, 3);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <div className="flex min-h-screen flex-col bg-background text-foreground antialiased selection:bg-forest selection:text-white">
+      {/* Swiss Editorial × Bento Liquid Navigation */}
+      <SiteHeader />
+
+      {/* Main Expansive Canvas */}
+      <main className="flex-1 max-w-6xl mx-auto w-full px-6 sm:px-8 space-y-24 sm:space-y-36">
+        {/* 01. Hero with Right-Aligned Chest Cutout Portrait */}
+        <HeroSection />
+
+        {/* 02. Client Review Masked Video (Directly Below Hero, Zero Overlay Text) */}
+        <NubifurnVideoReview />
+
+        {/* 03. Shipped Systems (Bento Card Architecture with Live Interactive Iframes) */}
+        <ShippedSystemsShowcase />
+
+        {/* 04. AI-Assisted Development Methodology (Core Engineering Differentiator) */}
+        <AiMethodologySection />
+
+        {/* 05. Languages, Frameworks & Infrastructure (Forest Green Bento Tiles) */}
+        <TechStackSection />
+
+        {/* 06. The Commercial Narrative & Engineering Transition (AuraWorks Founded in 2025) */}
+        <TimelineNarrativeSection />
+
+        {/* 07. Centered Rotating Earth Globe (Worldwide Distributed Capability) */}
+        <GlobalCapabilityCard />
+
+        {/* 08. The Monograph Handbook (The Ecommerce Startup That Sells) */}
+        <BookShowcaseSection />
+
+        {/* 09. Engineering Notes & Retrospectives */}
+        <RecentWritingSection posts={recentPosts} />
+
+        {/* 10. Dual Inquiry Paths (Recruitment Offers & Commercial Systems) */}
+        <CtaSection />
       </main>
+
+      {/* Editorial Footer */}
+      <SiteFooter />
     </div>
   );
 }

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reitumetse Sethabela — 7 Portfolio Design Explorations</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    /* Custom scrollbars */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0B0E14;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #202736;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #323F55;
+    }
+    .active-tab {
+      background: #1E293B;
+      color: #38BDF8;
+      border-color: #38BDF8;
+    }
+  </style>
+</head>
+<body class="bg-[#080B11] text-[#E2E8F0] min-h-screen flex flex-col">
+
+  <!-- TOP BAR -->
+  <header class="border-b border-slate-800/80 bg-[#0B0F17]/90 backdrop-blur sticky top-0 z-50 px-4 py-3">
+    <div class="max-w-[1920px] mx-auto flex flex-wrap items-center justify-between gap-4">
+      
+      <!-- Brand & Title -->
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-700 flex items-center justify-center font-bold text-white shadow-lg shadow-emerald-500/20">
+          RS
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h1 class="text-sm font-semibold tracking-wide text-white">Reitumetse Sethabela</h1>
+            <span class="text-[10px] mono px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-medium">DESIGN EXPLORATION LAB</span>
+          </div>
+          <p class="text-xs text-slate-400">7 Distinct Architectural Aesthetics (Including Swiss-Bento Hybrid)</p>
+        </div>
+      </div>
+
+      <!-- Design Selector Pills -->
+      <div class="flex items-center gap-1.5 overflow-x-auto py-1 px-1 bg-slate-900/90 border border-slate-800 rounded-xl" id="tabs-container">
+        <!-- Tab 0: Hybrid Flagship -->
+        <button onclick="switchDesign(0)" id="tab-0" class="design-tab px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-950/80 text-emerald-300 border border-emerald-500/50 shadow-sm flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>07 Swiss-Bento Hybrid ⭐</span>
+        </button>
+        <button onclick="switchDesign(1)" id="tab-1" class="design-tab px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-150 flex items-center gap-2 border border-transparent text-slate-400 hover:text-white">
+          <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+          <span>01 Monolith</span>
+        </button>
+        <button onclick="switchDesign(2)" id="tab-2" class="design-tab px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-150 flex items-center gap-2 border border-transparent text-slate-400 hover:text-white">
+          <span class="w-2 h-2 rounded-full bg-stone-300"></span>
+          <span>02 Swiss Editorial</span>
+        </button>
+        <button onclick="switchDesign(3)" id="tab-3" class="design-tab px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-150 flex items-center gap-2 border border-transparent text-slate-400 hover:text-white">
+          <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+          <span>03 Holographic</span>
+        </button>
+        <button onclick="switchDesign(4)" id="tab-4" class="design-tab px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-150 flex items-center gap-2 border border-transparent text-slate-400 hover:text-white">
+          <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+          <span>04 Retro Workstation</span>
+        </button>
+        <button onclick="switchDesign(5)" id="tab-5" class="design-tab px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-150 flex items-center gap-2 border border-transparent text-slate-400 hover:text-white">
+          <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+          <span>05 Bento Craft</span>
+        </button>
+        <button onclick="switchDesign(6)" id="tab-6" class="design-tab px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-150 flex items-center gap-2 border border-transparent text-slate-400 hover:text-white">
+          <span class="w-2 h-2 rounded-full bg-orange-400"></span>
+          <span>06 Spatial Exhibition</span>
+        </button>
+      </div>
+
+      <!-- Viewport & Action controls -->
+      <div class="flex items-center gap-3">
+        <!-- Viewport Size Controls -->
+        <div class="hidden xl:flex items-center bg-slate-900 border border-slate-800 rounded-lg p-0.5 text-xs text-slate-400 mono">
+          <button onclick="setViewport('100%')" id="vp-full" class="vp-btn px-2.5 py-1 rounded bg-slate-800 text-white font-medium">Full</button>
+          <button onclick="setViewport('1440px')" id="vp-1440" class="vp-btn px-2.5 py-1 rounded hover:text-white">1440px</button>
+          <button onclick="setViewport('1024px')" id="vp-1024" class="vp-btn px-2.5 py-1 rounded hover:text-white">1024px</button>
+          <button onclick="setViewport('430px')" id="vp-mobile" class="vp-btn px-2.5 py-1 rounded hover:text-white">Mobile</button>
+        </div>
+
+        <!-- Open in Full Tab -->
+        <a id="open-tab-btn" href="07-swiss-bento-hybrid.html" target="_blank" class="px-3.5 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-xs flex items-center gap-1.5 transition-colors shadow-sm">
+          <span>Open Full View</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- SUBHEADER / ACTIVE DESIGN SPEC BANNER -->
+  <div class="bg-[#0D121C] border-b border-slate-800/60 px-4 py-2.5 text-xs">
+    <div class="max-w-[1920px] mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <span class="mono font-semibold text-emerald-400" id="spec-number">07 / 07</span>
+        <span class="font-bold text-white text-sm" id="spec-title">Swiss Editorial × Technical Bento Hybrid</span>
+        <span class="text-slate-500">|</span>
+        <span class="text-slate-300" id="spec-aesthetic">Warm Paper Canvas · Deep Espresso Ink · British Forest Green · Bento Engineering Cards · Dual Recruitment & Client Paths</span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-400 mono text-[11px]">
+        <div><span class="text-slate-500">Palette:</span> <span id="spec-palette" class="text-slate-300">#F5F4EE / #1E4A38 / #00A389 / #151614</span></div>
+        <div><span class="text-slate-500">Typography:</span> <span id="spec-type" class="text-slate-300">Instrument Serif + Plus Jakarta Sans + JetBrains Mono</span></div>
+        <div><span class="text-slate-500">Stack:</span> <span class="text-emerald-400 font-medium">FastAPI · PostgreSQL · Railway · Next.js 15</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN PREVIEW WORKSPACE -->
+  <main class="flex-1 bg-[#05070B] flex flex-col items-center justify-start p-2 sm:p-4 overflow-hidden relative">
+    <div id="frame-wrapper" class="w-full h-[calc(100vh-125px)] transition-all duration-300 flex items-center justify-center">
+      <iframe 
+        id="preview-frame" 
+        src="07-swiss-bento-hybrid.html" 
+        class="w-full h-full rounded-xl border border-slate-800 shadow-2xl bg-white"
+        title="Design Preview Frame"
+      ></iframe>
+    </div>
+  </main>
+
+  <script>
+    const designs = [
+      {
+        id: "07",
+        name: "07 Swiss-Bento Hybrid ⭐",
+        title: "Swiss Editorial × Technical Bento Hybrid",
+        file: "07-swiss-bento-hybrid.html",
+        aesthetic: "Warm Paper Canvas · British Racing Forest Green · Instrument Serif · Bento Architecture Tiles · Dual Recruiter/Client Paths",
+        palette: "#F5F4EE (Paper) / #1E4A38 (Forest) / #00A389 (Teal) / #151614 (Ink)",
+        type: "Instrument Serif + Plus Jakarta Sans + JetBrains Mono"
+      },
+      {
+        id: "01",
+        name: "01 Monolith Precision",
+        title: "Monolith Precision & Telemetry",
+        file: "01-monolith-precision.html",
+        aesthetic: "Obsidian Void · Radiant Laser Teal · Monospace Telemetry · High-Precision Engineering",
+        palette: "#06080D (Obsidian) / #00E5BF (Teal) / #38BDF8 (Sky)",
+        type: "Geist Sans + JetBrains Mono"
+      },
+      {
+        id: "02",
+        name: "02 Swiss Editorial",
+        title: "Swiss International Editorial & Monograph",
+        file: "02-swiss-editorial.html",
+        aesthetic: "Warm Architectural Paper · Deep Espresso Ink · British Racing Green · Editorial Serif",
+        palette: "#F4F3ED (Parchment) / #161614 (Ink) / #1E4A38 (Forest)",
+        type: "Instrument Serif + Plus Jakarta Sans"
+      },
+      {
+        id: "03",
+        name: "03 Holographic Glass",
+        title: "Holographic Glass & Cybernetic HUD",
+        file: "03-holographic-glass.html",
+        aesthetic: "Frosted Glass Panels (blur-2xl) · Electric Cyan & Neon Violet · Floating Spatial Dock",
+        palette: "#030712 (Dark Void) / #00F0FF (Cyan) / #8B5CF6 (Violet)",
+        type: "Space Grotesk + JetBrains Mono"
+      },
+      {
+        id: "04",
+        name: "04 Retro Workstation",
+        title: "Retro-Futuristic UNIX Workstation & CRT",
+        file: "04-retro-workstation.html",
+        aesthetic: "Amber/Phosphor CRT Scanlines · Solarized Dark Shell · Monospace Command Interface",
+        palette: "#0D1117 (Shell) / #00FF66 (Phosphor Green) / #FFAA00 (Amber)",
+        type: "VT323 + Fira Code Monospace"
+      },
+      {
+        id: "05",
+        name: "05 Bento Craft",
+        title: "Modern Bento Craft & Modular Hardware",
+        file: "05-bento-craft.html",
+        aesthetic: "Curved Bento Cards (rounded-3xl) · Soft Non-Glare Off-White · Apple Bento Architecture",
+        palette: "#F6F6F2 (Canvas) / #111827 (Charcoal) / #2563EB (Sapphire)",
+        type: "Plus Jakarta Sans + JetBrains Mono"
+      },
+      {
+        id: "06",
+        name: "06 Spatial Exhibition",
+        title: "Spatial Horizon & Open Gallery Exhibition",
+        file: "06-spatial-exhibition.html",
+        aesthetic: "Museum Limestone Concrete · Monumental Display Type · Edge-to-Edge Unboxed Exhibits",
+        palette: "#F3F3EF (Gallery Stone) / #111214 (Ink) / #C85A32 (Terracotta)",
+        type: "Syne 800 + Inter + JetBrains Mono"
+      }
+    ];
+
+    let currentIndex = 0;
+
+    function switchDesign(index) {
+      currentIndex = index;
+      const d = designs[index];
+      
+      // Update iframe & direct link
+      document.getElementById('preview-frame').src = d.file;
+      document.getElementById('open-tab-btn').href = d.file;
+
+      // Update Spec Banner
+      document.getElementById('spec-number').innerText = `${d.id} / 07`;
+      document.getElementById('spec-title').innerText = d.title;
+      document.getElementById('spec-aesthetic').innerText = d.aesthetic;
+      document.getElementById('spec-palette').innerText = d.palette;
+      document.getElementById('spec-type').innerText = d.type;
+
+      // Update Tab Styles
+      for (let i = 0; i < designs.length; i++) {
+        const tab = document.getElementById(`tab-${i}`);
+        if (i === index) {
+          tab.className = "design-tab px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-950/80 text-emerald-300 border border-emerald-500/50 shadow-sm flex items-center gap-2";
+        } else {
+          tab.className = "design-tab px-3 py-1.5 rounded-lg text-xs font-medium text-slate-400 hover:text-white border border-transparent transition-all flex items-center gap-2";
+        }
+      }
+    }
+
+    function setViewport(width) {
+      const wrapper = document.getElementById('frame-wrapper');
+      wrapper.style.maxWidth = width;
+      
+      const btns = {
+        '100%': 'vp-full',
+        '1440px': 'vp-1440',
+        '1024px': 'vp-1024',
+        '430px': 'vp-mobile'
+      };
+
+      Object.entries(btns).forEach(([w, id]) => {
+        const el = document.getElementById(id);
+        if (w === width) {
+          el.className = "vp-btn px-2.5 py-1 rounded bg-slate-800 text-white font-medium";
+        } else {
+          el.className = "vp-btn px-2.5 py-1 rounded text-slate-400 hover:text-white";
+        }
+      });
+    }
+
+    // Initialize first tab
+    switchDesign(0);
+  </script>
+</body>
+</html>

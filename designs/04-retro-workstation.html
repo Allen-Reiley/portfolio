@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design 04: UNIX Workstation — Reitumetse Sethabela</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=VT323&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            mono: ['"Fira Code"', 'monospace'],
+            crt: ['VT323', 'monospace'],
+          },
+          colors: {
+            termBg: '#0D1117',
+            termPanel: '#161B22',
+            amberGlow: '#FFAA00',
+            phosphorGreen: '#00FF66',
+            termCyan: '#58A6FF',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #0B0E14;
+      color: #C9D1D9;
+      font-family: 'Fira Code', monospace;
+    }
+    .crt-scanlines {
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+      background-size: 100% 2px, 3px 100%;
+      pointer-events: none;
+    }
+    .video-mask {
+      aspect-ratio: 1213/667;
+      mask-image: url("data:image/svg+xml,%3Csvg width='221' height='122' viewBox='0 0 221 122' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fillRule='evenodd' clipRule='evenodd' d='M183 4C183 1.79086 184.791 0 187 0H217C219.209 0 221 1.79086 221 4V14V28V99C221 101.209 219.209 103 217 103H182C179.791 103 178 104.791 178 107V118C178 120.209 176.209 122 174 122H28C25.7909 122 24 120.209 24 118V103V94V46C24 43.7909 22.2091 42 20 42H4C1.79086 42 0 40.2091 0 38V18C0 15.7909 1.79086 14 4 14H24H43H179C181.209 14 183 12.2091 183 10V4Z' fill='%23D9D9D9'/%3E%3C/svg%3E%0A");
+      -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='221' height='122' viewBox='0 0 221 122' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fillRule='evenodd' clipRule='evenodd' d='M183 4C183 1.79086 184.791 0 187 0H217C219.209 0 221 1.79086 221 4V14V28V99C221 101.209 219.209 103 217 103H182C179.791 103 178 104.791 178 107V118C178 120.209 176.209 122 174 122H28C25.7909 122 24 120.209 24 118V103V94V46C24 43.7909 22.2091 42 20 42H4C1.79086 42 0 40.2091 0 38V18C0 15.7909 1.79086 14 4 14H24H43H179C181.209 14 183 12.2091 183 10V4Z' fill='%23D9D9D9'/%3E%3C/svg%3E%0A");
+      mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat;
+      mask-size: contain;
+      -webkit-mask-size: contain;
+    }
+  </style>
+</head>
+<body class="min-h-screen relative selection:bg-phosphorGreen selection:text-black p-4 sm:p-8">
+  <div class="crt-scanlines fixed inset-0 z-50"></div>
+
+  <!-- Terminal Window Shell -->
+  <div class="max-w-7xl mx-auto rounded-xl border border-slate-700 bg-termBg shadow-[0_0_50px_rgba(0,255,102,0.06)] overflow-hidden">
+    
+    <!-- Shell Header -->
+    <div class="bg-termPanel border-b border-slate-800 px-4 py-3 flex items-center justify-between text-xs">
+      <div class="flex items-center gap-2">
+        <span class="size-3 rounded-full bg-red-500/80 inline-block"></span>
+        <span class="size-3 rounded-full bg-amber-500/80 inline-block"></span>
+        <span class="size-3 rounded-full bg-green-500/80 inline-block"></span>
+        <span class="text-slate-400 font-bold ml-2">tty1 — reitumetse@auraworks: ~ (bash 5.2.15)</span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-400">
+        <span class="text-phosphorGreen">● LIVE 99.98%</span>
+        <span>JOHANNESBURG (UTC+2)</span>
+      </div>
+    </div>
+
+    <!-- Quick Keys Nav -->
+    <div class="bg-termBg border-b border-slate-800 px-6 py-2.5 flex flex-wrap items-center gap-6 text-xs font-mono text-slate-400">
+      <span class="text-amberGlow font-bold">[F1] OVERVIEW</span>
+      <a href="#work" class="hover:text-phosphorGreen transition-colors">[F2] PRODUCTION_WORK</a>
+      <a href="#stack" class="hover:text-phosphorGreen transition-colors">[F3] TECH_STACK</a>
+      <a href="#monograph" class="hover:text-phosphorGreen transition-colors">[F4] HANDBOOK_PDF</a>
+      <a href="https://cal.com/reitumetse-sethabela/30min" target="_blank" class="text-termCyan hover:underline">[F5] BOOK_CAL_COM ↗</a>
+    </div>
+
+    <!-- Terminal Main Body -->
+    <div class="p-6 sm:p-12 space-y-24">
+
+      <!-- HERO SECTION -->
+      <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 space-y-6">
+          <div class="text-xs text-phosphorGreen font-mono">
+            // INITIALIZING DEVELOPER WORKSTATION ENVIRONMENT...
+          </div>
+
+          <div class="space-y-2">
+            <h1 class="text-4xl sm:text-6xl font-bold tracking-tight text-white font-mono">
+              Reitumetse Sethabela
+            </h1>
+            <p class="text-lg text-amberGlow font-mono">
+              Full-Stack Developer & Founder · AuraWorks (Pty) Ltd
+            </p>
+          </div>
+
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+            I build high-concurrency e-commerce storefronts, FastAPI services on Railway, and business operations tools. Blending commercial sales psychology with software craftsmanship.
+          </p>
+
+          <div class="p-4 rounded-lg bg-black/60 border border-slate-800 font-mono text-xs text-slate-300 space-y-2">
+            <div><span class="text-phosphorGreen">reitumetse@dev:~$</span> cat capabilities.json</div>
+            <div class="text-slate-400">
+              { "location": "Johannesburg", "remote": "worldwide", "core": ["Next.js 15", "FastAPI", "Railway", "PostgreSQL"] }
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="https://cal.com/reitumetse-sethabela/30min" target="_blank" class="px-6 py-3 rounded-lg bg-phosphorGreen text-black font-bold text-xs hover:bg-white transition-all">
+              ./exec_cal_com_booking.sh ↗
+            </a>
+            <a href="#work" class="px-6 py-3 rounded-lg border border-slate-700 bg-termPanel text-slate-300 text-xs hover:border-slate-500 transition-all">
+              ls -la ./production_deployments
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Portrait Cutout framed in workstation -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end items-end relative">
+          <div class="relative w-full max-w-[340px] h-[520px] flex items-end justify-center">
+            <img src="images/reitumetse-chest.png" onerror="this.onerror=null;this.src='../frontend/public/images/reitumetse-chest.png';" alt="Reitumetse Sethabela" class="h-full object-contain object-bottom drop-shadow-[0_0_35px_rgba(0,255,102,0.15)]">
+          </div>
+        </div>
+      </section>
+
+      <!-- VIDEO REVIEW DIRECTLY UNDER HERO -->
+      <section class="flex flex-col items-center justify-center pt-4">
+        <div class="relative w-full max-w-3xl aspect-[221/122]">
+          <div class="w-full h-full video-mask bg-black overflow-hidden border border-slate-800">
+            <video autoplay muted loop playsinline class="w-full h-full object-cover">
+              <source src="https://videos.pexels.com/video-files/7710243/7710243-uhd_2560_1440_30fps.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <!-- SHIPPED WORK WITH LIVE IFRAMES -->
+      <section id="work" class="space-y-20 border-t border-slate-800 pt-16">
+        <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+          <div class="flex items-center gap-2">
+            <span class="text-phosphorGreen font-bold">&gt;</span>
+            <h2 class="text-2xl font-bold text-white uppercase font-mono">./shipped_systems</h2>
+          </div>
+          <span class="text-xs text-slate-500 font-mono">TOTAL_RECORDS: 5</span>
+        </div>
+
+        <!-- Nubifurn Storefront -->
+        <div class="space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+            <span class="text-amberGlow font-bold">[01] NUBIFURN_STOREFRONT — E-COMMERCE SHOWROOM</span>
+            <a href="https://nubifurn-frontend.vercel.app/" target="_blank" class="text-termCyan hover:underline">
+              https://nubifurn-frontend.vercel.app ↗
+            </a>
+          </div>
+          <div class="rounded-lg border border-slate-800 bg-black overflow-hidden shadow-2xl">
+            <iframe src="https://nubifurn-frontend.vercel.app/" class="w-full h-[520px] border-0" loading="lazy"></iframe>
+          </div>
+        </div>
+
+        <!-- Nubifurn Dashboard -->
+        <div class="space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+            <span class="text-amberGlow font-bold">[02] NUBIFURN_DASHBOARD — FASTAPI + RAILWAY + POSTGRES</span>
+            <a href="https://nubifurn.vercel.app/" target="_blank" class="text-termCyan hover:underline">
+              https://nubifurn.vercel.app ↗
+            </a>
+          </div>
+          <div class="rounded-lg border border-slate-800 bg-black overflow-hidden shadow-2xl">
+            <iframe src="https://nubifurn.vercel.app/" class="w-full h-[520px] border-0" loading="lazy"></iframe>
+          </div>
+        </div>
+
+        <!-- AuraWorks Platform -->
+        <div class="space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+            <span class="text-amberGlow font-bold">[03] AURAWORKS_PLATFORM — STUDIO REVENUE ENGINE</span>
+            <a href="https://www.auraworks.co.za/" target="_blank" class="text-termCyan hover:underline">
+              https://www.auraworks.co.za ↗
+            </a>
+          </div>
+          <div class="rounded-lg border border-slate-800 bg-black overflow-hidden shadow-2xl">
+            <iframe src="https://www.auraworks.co.za/" class="w-full h-[520px] border-0" loading="lazy"></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- TECH STACK -->
+      <section id="stack" class="space-y-8 border-t border-slate-800 pt-16 font-mono text-xs">
+        <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+          <span class="text-phosphorGreen">&gt;</span> ./show_toolchain.sh
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div class="p-5 rounded-lg border border-slate-800 bg-termPanel space-y-3">
+            <span class="text-amberGlow font-bold">LANGUAGES</span>
+            <p class="text-slate-400">TypeScript, Python, SQL, JavaScript, HTML5/CSS3</p>
+          </div>
+          <div class="p-5 rounded-lg border border-slate-800 bg-termPanel space-y-3">
+            <span class="text-amberGlow font-bold">FRONTEND</span>
+            <p class="text-slate-400">Next.js 15, React 19, Tailwind CSS v4, Motion</p>
+          </div>
+          <div class="p-5 rounded-lg border border-slate-800 bg-termPanel space-y-3">
+            <span class="text-amberGlow font-bold">BACKEND</span>
+            <p class="text-slate-400">FastAPI, Python Core, PostgreSQL, REST/Webhooks</p>
+          </div>
+          <div class="p-5 rounded-lg border border-slate-800 bg-termPanel space-y-3">
+            <span class="text-amberGlow font-bold">CLOUD/INFRA</span>
+            <p class="text-slate-400">Railway, Vercel Edge, Cloudflare, Linux, Git</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- MONOGRAPH -->
+      <section id="monograph" class="border-t border-slate-800 pt-12 flex flex-col sm:flex-row items-center justify-between gap-6 text-xs font-mono">
+        <div class="space-y-1">
+          <span class="text-phosphorGreen">// FREE_OPERATING_BLUEPRINT_75_PAGES.PDF</span>
+          <h3 class="text-xl font-bold text-white">The Ecommerce Startup That Sells</h3>
+          <p class="text-slate-400">Proven frameworks for customer acquisition, contractor agreements, and McDonald's SOPs.</p>
+        </div>
+        <a href="../frontend/public/book/the-ecommerce-startup-that-sells.pdf" download class="px-6 py-3 rounded-lg bg-termCyan text-black font-bold hover:bg-white transition-all shrink-0">
+          wget --download ./book.pdf ↓
+        </a>
+      </section>
+
+    </div>
+  </div>
+</body>
+</html>
