@@ -207,7 +207,7 @@ export function HallOfFameShowcase() {
             <div className="lg:col-span-6">
               <div className="rounded-2xl bg-slate-900/90 dark:bg-black/70 border border-slate-800 p-6 sm:p-8 font-mono text-xs space-y-4 shadow-xl">
                 <div className="flex items-center justify-between pb-3 border-b border-slate-800 text-slate-400">
-                  <span className="text-teal-400 font-semibold">// SYSTEM ARCHITECTURE</span>
+                  <span className="text-teal-400 font-semibold">{"// SYSTEM ARCHITECTURE"}</span>
                   <span>PostgreSQL + Supabase</span>
                 </div>
 

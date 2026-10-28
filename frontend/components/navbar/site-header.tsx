@@ -27,11 +27,13 @@ function GithubIcon({ className = "size-3.5" }: { className?: string }) {
 export function SiteHeader() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [prevPathname, setPrevPathname] = useState(pathname);
 
-  // Close mobile drawer on route change
-  useEffect(() => {
+  // Close mobile drawer on route change during render
+  if (prevPathname !== pathname) {
+    setPrevPathname(pathname);
     setMobileMenuOpen(false);
-  }, [pathname]);
+  }
 
   // Close mobile drawer on escape
   useEffect(() => {
@@ -171,8 +173,13 @@ export function SiteHeader() {
               })}
             </div>
 
-            {/* Mobile Actions: Direct Cal.com Trigger */}
-            <div className="pt-3 border-t border-border space-y-2">
+            {/* Mobile Actions: Direct Cal.com Trigger & Theme Control */}
+            <div className="pt-3 border-t border-border space-y-3">
+              <div className="flex items-center justify-between px-1 text-xs">
+                <span className="text-muted-foreground font-mono">Appearance</span>
+                <ThemeToggle className="bg-secondary/80 hover:bg-secondary px-2.5 py-1 text-xs font-mono" />
+              </div>
+
               <a
                 href="https://cal.com/reitumetse-sethabela/30min"
                 target="_blank"
