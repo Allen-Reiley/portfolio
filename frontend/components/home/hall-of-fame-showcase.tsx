@@ -78,7 +78,7 @@ export function HallOfFameShowcase() {
               {/* Action Buttons */}
               <div className="flex flex-wrap items-center gap-4 pt-4">
                 <a
-                  href="https://nubifurn-frontend.vercel.app/"
+                  href="https://nubifurn.co.za/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group inline-flex items-center gap-2 rounded-full bg-slate-900 text-white dark:bg-white dark:text-slate-950 px-5 py-2.5 text-xs font-semibold hover:opacity-90 transition-all shadow-sm"
@@ -107,9 +107,9 @@ export function HallOfFameShowcase() {
                     <span className="size-2.5 rounded-full bg-yellow-500/80" />
                     <span className="size-2.5 rounded-full bg-green-500/80" />
                   </div>
-                  <span className="opacity-60 truncate max-w-[200px]">nubifurn-frontend.vercel.app</span>
+                  <span className="opacity-60 truncate max-w-[200px]">nubifurn.co.za</span>
                   <a
-                    href="https://nubifurn-frontend.vercel.app/"
+                    href="https://nubifurn.co.za/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-white transition-colors"

@@ -26,7 +26,7 @@
 
 ## Commercial Production Systems
 - Nubifurn Storefront: Bespoke e-commerce showroom for luxury handcrafted furniture.
-  - Live URL: https://nubifurn-frontend.vercel.app/
+  - Live URL: https://nubifurn.co.za/
   - Stack: Next.js 15, React 19, FastAPI, PostgreSQL, Railway, Vercel
   - Case Study: https://reitumetse.dev/projects/nubifurn-frontend
 - Nubifurn Operations Dashboard: Internal logistics, product catalog, inventory states, and inquiry pipeline engine.

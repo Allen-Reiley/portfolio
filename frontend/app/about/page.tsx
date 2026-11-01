@@ -98,7 +98,7 @@ const FAQS = [
   },
   {
     q: "What commercial systems has Reitumetse Sethabela shipped?",
-    a: "Key commercial systems shipped include the Nubifurn Storefront (https://nubifurn-frontend.vercel.app/), the Nubifurn Operations Engine (https://nubifurn.vercel.app/), the AuraWorks Platform (https://www.auraworks.co.za/), the FLP Church Platform (https://flp-woad.vercel.app/), and the Tilulu Non-Profit Portal (https://tilulu.vercel.app/).",
+    a: "Key commercial systems shipped include the Nubifurn Storefront (https://nubifurn.co.za/), the Nubifurn Operations Engine (https://nubifurn.vercel.app/), the AuraWorks Platform (https://www.auraworks.co.za/), the FLP Church Platform (https://flp-woad.vercel.app/), and the Tilulu Non-Profit Portal (https://tilulu.vercel.app/).",
   },
   {
     q: "How can I hire or consult with Reitumetse Sethabela?",

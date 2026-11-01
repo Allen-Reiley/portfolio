@@ -28,7 +28,7 @@ export const PROJECTS: ProjectCaseStudy[] = [
     tagline: "Custom E-Commerce Experience for Handcrafted Designer Furniture",
     category: "E-Commerce",
     status: "Production Live",
-    liveUrl: "https://nubifurn-frontend.vercel.app/",
+    liveUrl: "https://nubifurn.co.za/",
     featured: true,
     summary:
       "A bespoke e-commerce storefront built for Nubifurn South Africa, specializing in luxury handcrafted couches and furniture. Features instant product variant customization, fluid transitions, and responsive mobile browsing.",

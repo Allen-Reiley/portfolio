@@ -37,7 +37,7 @@ His engineering workflow leverages AI-assisted development (Google DeepMind Anti
 ### 2.2 Nubifurn Storefront (Customer Digital Showroom)
 - System Classification: Bespoke E-Commerce Web Application
 - Status: Production Live
-- Live Deployment: https://nubifurn-frontend.vercel.app/
+- Live Deployment: https://nubifurn.co.za/
 - Case Study: https://reitumetse.dev/projects/nubifurn-frontend
 - Core Stack: Next.js 15, React 19, TypeScript, Tailwind CSS, FastAPI, Railway, Vercel
 - Problem Statement: Handcrafted designer furniture demands elevated aesthetic presentation, high-resolution textures, and instant variant updates without latency on mobile cellular connections.

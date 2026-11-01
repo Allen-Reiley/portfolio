@@ -65,7 +65,7 @@ export function ShippedSystemsShowcase() {
 
             <div className="lg:col-span-4 flex flex-col lg:items-end justify-between gap-4 h-full">
               <a
-                href="https://nubifurn-frontend.vercel.app/"
+                href="https://nubifurn.co.za/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-forest hover:bg-forest-dark text-white font-medium text-xs text-center transition-all shadow-sm flex items-center justify-center gap-1.5 group"
@@ -73,7 +73,7 @@ export function ShippedSystemsShowcase() {
                 <span>Launch Live Storefront</span>
                 <ArrowUpRight className="size-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
-              <span className="font-mono text-[11px] text-muted-foreground">Host: nubifurn-frontend.vercel.app</span>
+              <span className="font-mono text-[11px] text-muted-foreground">Host: nubifurn.co.za</span>
             </div>
           </div>
 
@@ -84,12 +84,12 @@ export function ShippedSystemsShowcase() {
                 <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
                 <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
-                <span className="ml-2 text-stone-300">https://nubifurn-frontend.vercel.app</span>
+                <span className="ml-2 text-stone-300">https://nubifurn.co.za</span>
               </div>
               <span className="text-emerald-400 font-semibold">Active Sandbox</span>
             </div>
             <iframe
-              src="https://nubifurn-frontend.vercel.app/"
+              src="https://nubifurn.co.za/"
               className="w-full h-[520px] bg-white border-0"
               loading="lazy"
               title="Nubifurn Storefront Sandbox"
